@@ -14,7 +14,7 @@ public class WriteTextTo {
 		
 		Scanner sc = new Scanner(System.in);
 		while(true) {
-		System.out.println("Enter the String to copy in file");
+		System.out.println("Enter the String to copy in file \n");
 		String input = sc.nextLine();
 		
 		if(input.equalsIgnoreCase("quit")) break;

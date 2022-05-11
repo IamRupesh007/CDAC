@@ -1,0 +1,124 @@
+package Problem2;
+
+
+	import java.io.FileNotFoundException;
+	import java.io.FileOutputStream;
+	import java.io.IOException;
+	import java.io.PrintWriter;
+	import java.util.Collections;
+	import java.util.ArrayList;
+	import java.util.Scanner;
+
+	public class ArrayList {
+
+		public static Scanner sc= new Scanner(System.in);
+		public static void main(String[] args) throws IOException {
+
+			ArrayList<Book> llist = new ArrayList<>();
+
+			llist.add(new Student("Dilip",75,33,"PratapNagar"));
+			llist.add(new Student("John",67.9,32,"GangaNagar"));
+			llist.add(new Student("Riya",85,13,"Haldighati"));
+			llist.add(new Student("Arzoo",95,23,"ShivPuri"));
+
+
+			int choice ;
+
+			do {
+				System.out.println("\n1.)Add Student: ");
+				System.out.println("2.)Remove student from list");
+				System.out.println("3.)Show all Student");
+				System.out.println("4.)Show Student on basis of polymorphism");
+				System.out.println("5.)find /student with name");
+				System.out.println("6.)Save Student data into a files");
+				System.out.println("7.) Exit..");
+				
+				System.out.println("\n......................................\n");
+				System.out.println("Enter your choice");
+				choice = sc.nextInt();
+				sc.nextLine();
+
+				switch(choice) {
+				case 1:
+					System.out.println("How Many Student You want to add: ");
+					int num=sc.nextInt();
+					sc.nextLine();
+					while(num-->0) {
+						System.out.print("Enter Name");
+					String n=sc.nextLine();
+					System.out.print("Enter Percentage");
+					double d=sc.nextDouble();
+					sc.nextLine();
+					System.out.print("Enter roll num");
+					int r=sc.nextInt();
+					sc.nextLine();
+					System.out.print("Enter Your Address");
+					String ad=sc.nextLine();
+
+					llist.add(new Student(n,d,r,ad));
+				}
+
+				System.out.println("Student is Added");
+				break;
+
+
+			case 2:
+				System.out.println("Enter Index..");
+				int nu=sc.nextInt();
+				sc.nextLine();
+
+				llist.remove(nu-1);
+				System.out.println("Student is removed:");
+				break;
+			case 3:for(Student s:llist) {
+				System.out.println(s);
+			}
+			break;
+			case 4:System.out.println("Students Sort By percentage..");
+			Collections.sort(llist);
+			for(Student s:llist) {
+				System.out.println(s);
+			}
+			break;
+			
+			case 5: System.out.println("Enter Name");
+			       String n=sc.nextLine();
+			       int f=1;
+				for(Student s:llist) {
+					if(s.getName().equals(n))
+					{
+						f=0;
+						System.out.println(s);
+						break; 
+						
+					}
+				}
+				if(f==1) {
+					System.out.println("Student Not Present!!");
+				}
+				break;
+			case 6:
+					FileOutputStream fout = new FileOutputStream("F:\\student.txt");
+					PrintWriter pw = new PrintWriter(fout);
+					for(Student s:llist) {
+						pw.println(s);
+						pw.flush();
+					}
+					pw.close();
+					fout.close();
+					
+					System.out.println("Data is Saved in Files");
+					break;
+					
+			case 7:break;
+			default : System.out.println("Invalid Choice...");
+
+
+			}
+
+		}while(choice!=7);
+
+	}
+
+	}
+}
