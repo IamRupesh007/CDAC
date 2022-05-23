@@ -1,0 +1,1617 @@
+Microsoft Windows [Version 10.0.19044.1706]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Lenovo>mysql --host=127.0.0.1 --port=3306 --user=root --password=Rupesh@1996
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 8.0.29 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use db1;
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| db1        |
++------------+
+1 row in set (0.00 sec)
+
+mysql> table emp;
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA         | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI     | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN      | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH      | a12recmpm  | NULL       |        1 |
+|  7369 | SMITH    | M      | CLERK               | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS       | r50mpm     | 7032300011 |        0 |
+|  7499 | ALLEN    | M      | SALESMAN            | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 |
+|  7521 | WARD     | M      | SALESMAN            | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 |
+|  7654 | MARTIN   | M      | SALESMAN            | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE   | a12recmpm  | NULL       |        1 |
+|  7844 | TURNER   | M      | SALESMAN            | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 |
+|  7876 | ADAMS    | M      | CLERK               | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 |
+|  7900 | JAMES    | M      | CLERK               | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL     | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS        | sales@2017 | NULL       |        1 |
+|  7934 | MILLER   | M      | CLERK               | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | QUARTERNOTE  | r50mpm     | 7132300055 |        0 |
+|  7945 | AARUSH   | M      | SALESMAN            | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | AARUSH       | ABCDEF     | NULL       |        0 |
+|  7949 | ALEX     | M      | MANAGER             | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | QUARTERREST  | sales@2017 | 7156567183 |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA      | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA      | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SUPRIYA      | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+28 rows in set (0.00 sec)
+
+mysql> select ENAME, JOB, HIREDATE from emp where extract(month from HIREDATE) >= 02 and extract(month from HIREDATE) <= 05 and extract(year from HIREDATE) = 1981;
++-------+----------+------------+
+| ENAME | JOB      | HIREDATE   |
++-------+----------+------------+
+| ALLEN | SALESMAN | 1981-02-20 |
+| WARD  | SALESMAN | 1981-02-22 |
+| JONES | MANAGER  | 1981-04-02 |
+| BLAKE | MANAGER  | 1981-05-01 |
++-------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select ENAME, JOB, HIREDATE from emp where extract(month from HIREDATE) >= 02 and extract(month from HIREDATE) <= 05 and extract (year from HIREDATE) = 1981;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from HIREDATE) = 1981' at line 1
+mysql> select ENAME, JOB, HIREDATE from emp where (HIREDATE between 1981-02-01 and 1981-05-31);
+Empty set, 2 warnings (0.00 sec)
+
+mysql> select ENAME, JOB, HIREDATE from emp where (HIREDATE between '1981-02-01' and '1981-05-31');
++-------+----------+------------+
+| ENAME | JOB      | HIREDATE   |
++-------+----------+------------+
+| ALLEN | SALESMAN | 1981-02-20 |
+| WARD  | SALESMAN | 1981-02-22 |
+| JONES | MANAGER  | 1981-04-02 |
+| BLAKE | MANAGER  | 1981-05-01 |
++-------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select ENAME, HIREDATE from emp where extract(year from HIREDATE) = 1982;
++---------+------------+
+| ENAME   | HIREDATE   |
++---------+------------+
+| SCOTT   | 1982-12-09 |
+| HOFFMAN | 1982-03-24 |
+| MILLER  | 1982-01-23 |
+| ALEX    | 1982-01-24 |
++---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select curdate();
++------------+
+| curdate()  |
++------------+
+| 2022-05-22 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate() as 'current date';
++--------------+
+| current date |
++--------------+
+| 2022-05-22   |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> select HIREDATE, concat(day(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), 'of' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) from emp;
++------------+-----------------------------------------------------------------------------------------------------------------------+
+| HIREDATE   | concat(day(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), 'of' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) |
++------------+-----------------------------------------------------------------------------------------------------------------------+
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
+| 1980-12-17 | 17, the 17thofDec, 1980                                                                                               |
+| 1981-12-31 | 31, the 31stofDec, 1981                                                                                               |
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
+| 1981-02-20 | 20, the 20thofFeb, 1981                                                                                               |
+| 1981-02-22 | 22, the 22ndofFeb, 1981                                                                                               |
+| 1981-04-02 | 2, the 2ndofApr, 1981                                                                                                 |
+| 1981-09-28 | 28, the 28thofSep, 1981                                                                                               |
+| 1981-05-01 | 1, the 1stofMay, 1981                                                                                                 |
+| 1981-06-09 | 9, the 9thofJun, 1981                                                                                                 |
+| 1982-12-09 | 9, the 9thofDec, 1982                                                                                                 |
+| 1981-11-17 | 17, the 17thofNov, 1981                                                                                               |
+| 1983-08-09 | 9, the 9thofAug, 1983                                                                                                 |
+| 1981-09-08 | 8, the 8thofSep, 1981                                                                                                 |
+| 1983-01-12 | 12, the 12thofJan, 1983                                                                                               |
+| 1981-12-03 | 3, the 3rdofDec, 1981                                                                                                 |
+| 1981-12-03 | 3, the 3rdofDec, 1981                                                                                                 |
+| 1982-03-24 | 24, the 24thofMar, 1982                                                                                               |
+| 1980-02-14 | 14, the 14thofFeb, 1980                                                                                               |
+| 1982-01-23 | 23, the 23rdofJan, 1982                                                                                               |
+| 1980-02-14 | 14, the 14thofFeb, 1980                                                                                               |
+| 1982-01-24 | 24, the 24thofJan, 1982                                                                                               |
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
+| 1981-07-19 | 19, the 19thofJul, 1981                                                                                               |
++------------+-----------------------------------------------------------------------------------------------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select HIREDATE, concat(dayname(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) from emp;
++------------+-----------------------------------------------------------------------------------------------------------------------------+
+| HIREDATE   | concat(dayname(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) |
++------------+-----------------------------------------------------------------------------------------------------------------------------+
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
+| 1980-12-17 | Wednesday, the 17th of Dec, 1980                                                                                            |
+| 1981-12-31 | Thursday, the 31st of Dec, 1981                                                                                             |
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
+| 1981-02-20 | Friday, the 20th of Feb, 1981                                                                                               |
+| 1981-02-22 | Sunday, the 22nd of Feb, 1981                                                                                               |
+| 1981-04-02 | Thursday, the 2nd of Apr, 1981                                                                                              |
+| 1981-09-28 | Monday, the 28th of Sep, 1981                                                                                               |
+| 1981-05-01 | Friday, the 1st of May, 1981                                                                                                |
+| 1981-06-09 | Tuesday, the 9th of Jun, 1981                                                                                               |
+| 1982-12-09 | Thursday, the 9th of Dec, 1982                                                                                              |
+| 1981-11-17 | Tuesday, the 17th of Nov, 1981                                                                                              |
+| 1983-08-09 | Tuesday, the 9th of Aug, 1983                                                                                               |
+| 1981-09-08 | Tuesday, the 8th of Sep, 1981                                                                                               |
+| 1983-01-12 | Wednesday, the 12th of Jan, 1983                                                                                            |
+| 1981-12-03 | Thursday, the 3rd of Dec, 1981                                                                                              |
+| 1981-12-03 | Thursday, the 3rd of Dec, 1981                                                                                              |
+| 1982-03-24 | Wednesday, the 24th of Mar, 1982                                                                                            |
+| 1980-02-14 | Thursday, the 14th of Feb, 1980                                                                                             |
+| 1982-01-23 | Saturday, the 23rd of Jan, 1982                                                                                             |
+| 1980-02-14 | Thursday, the 14th of Feb, 1980                                                                                             |
+| 1982-01-24 | Sunday, the 24th of Jan, 1982                                                                                               |
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
+| 1981-07-19 | Sunday, the 19th of Jul, 1981                                                                                               |
++------------+-----------------------------------------------------------------------------------------------------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select HIREDATE, concat(dayname(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), ' of ' , monthname(HIREDATE), ', ' , year(HIREDATE)) from emp;
++------------+----------------------------------------------------------------------------------------------------------------------+
+| HIREDATE   | concat(dayname(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), ' of ' , monthname(HIREDATE), ', ' , year(HIREDATE)) |
++------------+----------------------------------------------------------------------------------------------------------------------+
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
+| 1980-12-17 | Wednesday, the 17th of December, 1980                                                                                |
+| 1981-12-31 | Thursday, the 31st of December, 1981                                                                                 |
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
+| 1981-02-20 | Friday, the 20th of February, 1981                                                                                   |
+| 1981-02-22 | Sunday, the 22nd of February, 1981                                                                                   |
+| 1981-04-02 | Thursday, the 2nd of April, 1981                                                                                     |
+| 1981-09-28 | Monday, the 28th of September, 1981                                                                                  |
+| 1981-05-01 | Friday, the 1st of May, 1981                                                                                         |
+| 1981-06-09 | Tuesday, the 9th of June, 1981                                                                                       |
+| 1982-12-09 | Thursday, the 9th of December, 1982                                                                                  |
+| 1981-11-17 | Tuesday, the 17th of November, 1981                                                                                  |
+| 1983-08-09 | Tuesday, the 9th of August, 1983                                                                                     |
+| 1981-09-08 | Tuesday, the 8th of September, 1981                                                                                  |
+| 1983-01-12 | Wednesday, the 12th of January, 1983                                                                                 |
+| 1981-12-03 | Thursday, the 3rd of December, 1981                                                                                  |
+| 1981-12-03 | Thursday, the 3rd of December, 1981                                                                                  |
+| 1982-03-24 | Wednesday, the 24th of March, 1982                                                                                   |
+| 1980-02-14 | Thursday, the 14th of February, 1980                                                                                 |
+| 1982-01-23 | Saturday, the 23rd of January, 1982                                                                                  |
+| 1980-02-14 | Thursday, the 14th of February, 1980                                                                                 |
+| 1982-01-24 | Sunday, the 24th of January, 1982                                                                                    |
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
+| 1981-07-19 | Sunday, the 19th of July, 1981                                                                                       |
++------------+----------------------------------------------------------------------------------------------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select HIREDATE, concat(dayname(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), ' of ' , monthname(HIREDATE), ', ' , year(HIREDATE)) date3 from emp;
++------------+---------------------------------------+
+| HIREDATE   | date3                                 |
++------------+---------------------------------------+
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
+| 1980-12-17 | Wednesday, the 17th of December, 1980 |
+| 1981-12-31 | Thursday, the 31st of December, 1981  |
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
+| 1981-02-20 | Friday, the 20th of February, 1981    |
+| 1981-02-22 | Sunday, the 22nd of February, 1981    |
+| 1981-04-02 | Thursday, the 2nd of April, 1981      |
+| 1981-09-28 | Monday, the 28th of September, 1981   |
+| 1981-05-01 | Friday, the 1st of May, 1981          |
+| 1981-06-09 | Tuesday, the 9th of June, 1981        |
+| 1982-12-09 | Thursday, the 9th of December, 1982   |
+| 1981-11-17 | Tuesday, the 17th of November, 1981   |
+| 1983-08-09 | Tuesday, the 9th of August, 1983      |
+| 1981-09-08 | Tuesday, the 8th of September, 1981   |
+| 1983-01-12 | Wednesday, the 12th of January, 1983  |
+| 1981-12-03 | Thursday, the 3rd of December, 1981   |
+| 1981-12-03 | Thursday, the 3rd of December, 1981   |
+| 1982-03-24 | Wednesday, the 24th of March, 1982    |
+| 1980-02-14 | Thursday, the 14th of February, 1980  |
+| 1982-01-23 | Saturday, the 23rd of January, 1982   |
+| 1980-02-14 | Thursday, the 14th of February, 1980  |
+| 1982-01-24 | Sunday, the 24th of January, 1982     |
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
+| 1981-07-19 | Sunday, the 19th of July, 1981        |
++------------+---------------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ENAME, HIREDATE, dayname(HIREDATE) from emp;
++----------+------------+-------------------+
+| ENAME    | HIREDATE   | dayname(HIREDATE) |
++----------+------------+-------------------+
+| GITA     | 1981-07-19 | Sunday            |
+| VRUSHALI | 1981-07-19 | Sunday            |
+| SHARMIN  | 1981-07-19 | Sunday            |
+| BANDISH  | 1981-07-19 | Sunday            |
+| SMITH    | 1980-12-17 | Wednesday         |
+| AARAV    | 1981-12-31 | Thursday          |
+| THOMAS   | 1981-07-19 | Sunday            |
+| ALLEN    | 1981-02-20 | Friday            |
+| WARD     | 1981-02-22 | Sunday            |
+| JONES    | 1981-04-02 | Thursday          |
+| MARTIN   | 1981-09-28 | Monday            |
+| BLAKE    | 1981-05-01 | Friday            |
+| CLARK    | 1981-06-09 | Tuesday           |
+| SCOTT    | 1982-12-09 | Thursday          |
+| KING     | 1981-11-17 | Tuesday           |
+| FRED     | 1983-08-09 | Tuesday           |
+| TURNER   | 1981-09-08 | Tuesday           |
+| ADAMS    | 1983-01-12 | Wednesday         |
+| JAMES    | 1981-12-03 | Thursday          |
+| FORD     | 1981-12-03 | Thursday          |
+| HOFFMAN  | 1982-03-24 | Wednesday         |
+| GRASS    | 1980-02-14 | Thursday          |
+| MILLER   | 1982-01-23 | Saturday          |
+| AARUSH   | 1980-02-14 | Thursday          |
+| ALEX     | 1982-01-24 | Sunday            |
+| NATASHA  | 1981-07-19 | Sunday            |
+| SANGITA  | 1981-07-19 | Sunday            |
+| SUPRIYA  | 1981-07-19 | Sunday            |
++----------+------------+-------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ENAME, HIREDATE, weekday(HIREDATE) from emp;
++----------+------------+-------------------+
+| ENAME    | HIREDATE   | weekday(HIREDATE) |
++----------+------------+-------------------+
+| GITA     | 1981-07-19 |                 6 |
+| VRUSHALI | 1981-07-19 |                 6 |
+| SHARMIN  | 1981-07-19 |                 6 |
+| BANDISH  | 1981-07-19 |                 6 |
+| SMITH    | 1980-12-17 |                 2 |
+| AARAV    | 1981-12-31 |                 3 |
+| THOMAS   | 1981-07-19 |                 6 |
+| ALLEN    | 1981-02-20 |                 4 |
+| WARD     | 1981-02-22 |                 6 |
+| JONES    | 1981-04-02 |                 3 |
+| MARTIN   | 1981-09-28 |                 0 |
+| BLAKE    | 1981-05-01 |                 4 |
+| CLARK    | 1981-06-09 |                 1 |
+| SCOTT    | 1982-12-09 |                 3 |
+| KING     | 1981-11-17 |                 1 |
+| FRED     | 1983-08-09 |                 1 |
+| TURNER   | 1981-09-08 |                 1 |
+| ADAMS    | 1983-01-12 |                 2 |
+| JAMES    | 1981-12-03 |                 3 |
+| FORD     | 1981-12-03 |                 3 |
+| HOFFMAN  | 1982-03-24 |                 2 |
+| GRASS    | 1980-02-14 |                 3 |
+| MILLER   | 1982-01-23 |                 5 |
+| AARUSH   | 1980-02-14 |                 3 |
+| ALEX     | 1982-01-24 |                 6 |
+| NATASHA  | 1981-07-19 |                 6 |
+| SANGITA  | 1981-07-19 |                 6 |
+| SUPRIYA  | 1981-07-19 |                 6 |
++----------+------------+-------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ENAME, HIREDATE, weekday(HIREDATE), dayname(HIREDATE) from emp ;
++----------+------------+-------------------+-------------------+
+| ENAME    | HIREDATE   | weekday(HIREDATE) | dayname(HIREDATE) |
++----------+------------+-------------------+-------------------+
+| GITA     | 1981-07-19 |                 6 | Sunday            |
+| VRUSHALI | 1981-07-19 |                 6 | Sunday            |
+| SHARMIN  | 1981-07-19 |                 6 | Sunday            |
+| BANDISH  | 1981-07-19 |                 6 | Sunday            |
+| SMITH    | 1980-12-17 |                 2 | Wednesday         |
+| AARAV    | 1981-12-31 |                 3 | Thursday          |
+| THOMAS   | 1981-07-19 |                 6 | Sunday            |
+| ALLEN    | 1981-02-20 |                 4 | Friday            |
+| WARD     | 1981-02-22 |                 6 | Sunday            |
+| JONES    | 1981-04-02 |                 3 | Thursday          |
+| MARTIN   | 1981-09-28 |                 0 | Monday            |
+| BLAKE    | 1981-05-01 |                 4 | Friday            |
+| CLARK    | 1981-06-09 |                 1 | Tuesday           |
+| SCOTT    | 1982-12-09 |                 3 | Thursday          |
+| KING     | 1981-11-17 |                 1 | Tuesday           |
+| FRED     | 1983-08-09 |                 1 | Tuesday           |
+| TURNER   | 1981-09-08 |                 1 | Tuesday           |
+| ADAMS    | 1983-01-12 |                 2 | Wednesday         |
+| JAMES    | 1981-12-03 |                 3 | Thursday          |
+| FORD     | 1981-12-03 |                 3 | Thursday          |
+| HOFFMAN  | 1982-03-24 |                 2 | Wednesday         |
+| GRASS    | 1980-02-14 |                 3 | Thursday          |
+| MILLER   | 1982-01-23 |                 5 | Saturday          |
+| AARUSH   | 1980-02-14 |                 3 | Thursday          |
+| ALEX     | 1982-01-24 |                 6 | Sunday            |
+| NATASHA  | 1981-07-19 |                 6 | Sunday            |
+| SANGITA  | 1981-07-19 |                 6 | Sunday            |
+| SUPRIYA  | 1981-07-19 |                 6 | Sunday            |
++----------+------------+-------------------+-------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ENAME, HIREDATE, weekday(HIREDATE), dayname(HIREDATE) from emp orderby  weekday(HIREDATE);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'weekday(HIREDATE)' at line 1
+mysql> select ENAME, HIREDATE, weekday(HIREDATE), dayname(HIREDATE) from emp orderby weekday(HIREDATE);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'weekday(HIREDATE)' at line 1
+mysql> select ENAME, HIREDATE, weekday(HIREDATE), dayname(HIREDATE) from emp order by weekday(HIREDATE);
++----------+------------+-------------------+-------------------+
+| ENAME    | HIREDATE   | weekday(HIREDATE) | dayname(HIREDATE) |
++----------+------------+-------------------+-------------------+
+| MARTIN   | 1981-09-28 |                 0 | Monday            |
+| CLARK    | 1981-06-09 |                 1 | Tuesday           |
+| KING     | 1981-11-17 |                 1 | Tuesday           |
+| FRED     | 1983-08-09 |                 1 | Tuesday           |
+| TURNER   | 1981-09-08 |                 1 | Tuesday           |
+| SMITH    | 1980-12-17 |                 2 | Wednesday         |
+| ADAMS    | 1983-01-12 |                 2 | Wednesday         |
+| HOFFMAN  | 1982-03-24 |                 2 | Wednesday         |
+| AARAV    | 1981-12-31 |                 3 | Thursday          |
+| JONES    | 1981-04-02 |                 3 | Thursday          |
+| SCOTT    | 1982-12-09 |                 3 | Thursday          |
+| JAMES    | 1981-12-03 |                 3 | Thursday          |
+| FORD     | 1981-12-03 |                 3 | Thursday          |
+| GRASS    | 1980-02-14 |                 3 | Thursday          |
+| AARUSH   | 1980-02-14 |                 3 | Thursday          |
+| ALLEN    | 1981-02-20 |                 4 | Friday            |
+| BLAKE    | 1981-05-01 |                 4 | Friday            |
+| MILLER   | 1982-01-23 |                 5 | Saturday          |
+| GITA     | 1981-07-19 |                 6 | Sunday            |
+| VRUSHALI | 1981-07-19 |                 6 | Sunday            |
+| SHARMIN  | 1981-07-19 |                 6 | Sunday            |
+| BANDISH  | 1981-07-19 |                 6 | Sunday            |
+| THOMAS   | 1981-07-19 |                 6 | Sunday            |
+| WARD     | 1981-02-22 |                 6 | Sunday            |
+| ALEX     | 1982-01-24 |                 6 | Sunday            |
+| NATASHA  | 1981-07-19 |                 6 | Sunday            |
+| SANGITA  | 1981-07-19 |                 6 | Sunday            |
+| SUPRIYA  | 1981-07-19 |                 6 | Sunday            |
++----------+------------+-------------------+-------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ENAME, HIREDATE, dayofweek(HIREDATE), dayname(HIREDATE) from emp order by weekday(HIREDATE);
++----------+------------+---------------------+-------------------+
+| ENAME    | HIREDATE   | dayofweek(HIREDATE) | dayname(HIREDATE) |
++----------+------------+---------------------+-------------------+
+| MARTIN   | 1981-09-28 |                   2 | Monday            |
+| CLARK    | 1981-06-09 |                   3 | Tuesday           |
+| KING     | 1981-11-17 |                   3 | Tuesday           |
+| FRED     | 1983-08-09 |                   3 | Tuesday           |
+| TURNER   | 1981-09-08 |                   3 | Tuesday           |
+| SMITH    | 1980-12-17 |                   4 | Wednesday         |
+| ADAMS    | 1983-01-12 |                   4 | Wednesday         |
+| HOFFMAN  | 1982-03-24 |                   4 | Wednesday         |
+| AARAV    | 1981-12-31 |                   5 | Thursday          |
+| JONES    | 1981-04-02 |                   5 | Thursday          |
+| SCOTT    | 1982-12-09 |                   5 | Thursday          |
+| JAMES    | 1981-12-03 |                   5 | Thursday          |
+| FORD     | 1981-12-03 |                   5 | Thursday          |
+| GRASS    | 1980-02-14 |                   5 | Thursday          |
+| AARUSH   | 1980-02-14 |                   5 | Thursday          |
+| ALLEN    | 1981-02-20 |                   6 | Friday            |
+| BLAKE    | 1981-05-01 |                   6 | Friday            |
+| MILLER   | 1982-01-23 |                   7 | Saturday          |
+| GITA     | 1981-07-19 |                   1 | Sunday            |
+| VRUSHALI | 1981-07-19 |                   1 | Sunday            |
+| SHARMIN  | 1981-07-19 |                   1 | Sunday            |
+| BANDISH  | 1981-07-19 |                   1 | Sunday            |
+| THOMAS   | 1981-07-19 |                   1 | Sunday            |
+| WARD     | 1981-02-22 |                   1 | Sunday            |
+| ALEX     | 1982-01-24 |                   1 | Sunday            |
+| NATASHA  | 1981-07-19 |                   1 | Sunday            |
+| SANGITA  | 1981-07-19 |                   1 | Sunday            |
+| SUPRIYA  | 1981-07-19 |                   1 | Sunday            |
++----------+------------+---------------------+-------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ENAME, HIREDATE, dayofweek(HIREDATE), dayname(HIREDATE) from emp order by dayofweek(HIREDATE);
++----------+------------+---------------------+-------------------+
+| ENAME    | HIREDATE   | dayofweek(HIREDATE) | dayname(HIREDATE) |
++----------+------------+---------------------+-------------------+
+| GITA     | 1981-07-19 |                   1 | Sunday            |
+| VRUSHALI | 1981-07-19 |                   1 | Sunday            |
+| SHARMIN  | 1981-07-19 |                   1 | Sunday            |
+| BANDISH  | 1981-07-19 |                   1 | Sunday            |
+| THOMAS   | 1981-07-19 |                   1 | Sunday            |
+| WARD     | 1981-02-22 |                   1 | Sunday            |
+| ALEX     | 1982-01-24 |                   1 | Sunday            |
+| NATASHA  | 1981-07-19 |                   1 | Sunday            |
+| SANGITA  | 1981-07-19 |                   1 | Sunday            |
+| SUPRIYA  | 1981-07-19 |                   1 | Sunday            |
+| MARTIN   | 1981-09-28 |                   2 | Monday            |
+| CLARK    | 1981-06-09 |                   3 | Tuesday           |
+| KING     | 1981-11-17 |                   3 | Tuesday           |
+| FRED     | 1983-08-09 |                   3 | Tuesday           |
+| TURNER   | 1981-09-08 |                   3 | Tuesday           |
+| SMITH    | 1980-12-17 |                   4 | Wednesday         |
+| ADAMS    | 1983-01-12 |                   4 | Wednesday         |
+| HOFFMAN  | 1982-03-24 |                   4 | Wednesday         |
+| AARAV    | 1981-12-31 |                   5 | Thursday          |
+| JONES    | 1981-04-02 |                   5 | Thursday          |
+| SCOTT    | 1982-12-09 |                   5 | Thursday          |
+| JAMES    | 1981-12-03 |                   5 | Thursday          |
+| FORD     | 1981-12-03 |                   5 | Thursday          |
+| GRASS    | 1980-02-14 |                   5 | Thursday          |
+| AARUSH   | 1980-02-14 |                   5 | Thursday          |
+| ALLEN    | 1981-02-20 |                   6 | Friday            |
+| BLAKE    | 1981-05-01 |                   6 | Friday            |
+| MILLER   | 1982-01-23 |                   7 | Saturday          |
++----------+------------+---------------------+-------------------+
+28 rows in set (0.00 sec)
+
+mysql> table orders;
++------+---------+---------------------+------+------+--------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   |
++------+---------+---------------------+------+------+--------+
+| 3001 |   18.69 | 1996-10-03 12:30:00 | 2008 | 1007 | Online |
+| 3002 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online |
+| 3003 |  767.19 | 1996-10-03 13:45:00 | 2001 | 1001 | Online |
+| 3005 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1002 | Online |
+| 3006 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online |
+| 3007 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1003 | Online |
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Online |
+| 3009 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3010 | 1309.95 | 1996-10-06 13:12:00 | 2004 | 1002 | Online |
+| 3011 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3013 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online |
+| 3015 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online |
+| 3016 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1001 | Online |
+| 3017 |   18.69 | 1996-10-03 12:30:00 | 2001 | 1007 | Online |
+| 3018 |  767.19 | 1996-10-03 13:45:00 | 2002 | 1001 | Online |
+| 3019 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Online |
+| 3021 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3023 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1004 | Online |
+| 3024 |    4723 | 1996-10-05 12:07:00 | 2006 | 1002 | Online |
+| 3025 | 1309.95 | 1996-10-06 13:12:00 | 2002 | 1002 | Online |
+| 3026 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3028 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online |
+| 3029 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online |
+| 3031 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1007 | Online |
+| 3032 |    3434 | 1996-01-26 17:09:12 | 2006 | 1007 | Online |
+| 3033 |     522 | 1996-12-24 14:23:00 | 2002 | 1002 | Online |
+| 3049 |     500 | 1996-03-14 07:45:19 | 2001 | 1003 | Online |
+| 3074 |     457 | 1996-04-19 05:13:00 | 2008 | 1007 | Online |
+| 3119 |     125 | 1996-07-26 18:37:00 | 2007 | 1001 | Online |
+| 4001 |     145 | 1996-05-13 20:47:00 | 2008 | 1003 | Online |
+| 4012 |     245 | 1996-03-06 13:07:00 | 2001 | 1002 | Online |
+| 4021 |     600 | 1996-08-12 13:07:00 | 2001 | 1002 | Online |
+| 4054 |    1200 | 1996-11-22 13:07:00 | 2004 | 1003 | Online |
+| 5011 |     138 | 1996-09-14 13:07:00 | 2001 | 1007 | Online |
+| 5014 |     980 | 1996-08-23 13:07:00 | 2002 | 1007 | Online |
+| 5015 |    2133 | 1996-06-23 13:07:00 | 2004 | 1007 | Online |
+| 5016 |    1000 | 1996-03-12 13:07:00 | 2002 | 1007 | Online |
+| 5053 |    1500 | 1996-01-01 13:07:00 | 2006 | 1007 | Online |
+| 5099 |     790 | 1996-04-24 13:07:00 | 2002 | 1007 | Online |
+| 6501 |     125 | 1996-06-13 13:07:00 | 2001 | 1001 | Online |
+| 6502 |     535 | 1996-08-24 13:07:00 | 2006 | 1004 | Online |
+| 6503 |    1100 | 1996-07-26 13:07:00 | 2006 | 1007 | Online |
+| 6504 |    1350 | 1996-07-21 13:07:00 | 2008 | 1007 | Online |
++------+---------+---------------------+------+------+--------+
+49 rows in set (0.00 sec)
+
+mysql> select * from orders where odate=1996;
+Empty set, 1 warning (0.00 sec)
+
+mysql> select * from orders where extract(year from odate)=1996;
++------+---------+---------------------+------+------+--------+
+| ONUM | AMT     | ODATE               | CNUM | SNUM | type   |
++------+---------+---------------------+------+------+--------+
+| 3001 |   18.69 | 1996-10-03 12:30:00 | 2008 | 1007 | Online |
+| 3002 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online |
+| 3003 |  767.19 | 1996-10-03 13:45:00 | 2001 | 1001 | Online |
+| 3005 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1002 | Online |
+| 3006 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online |
+| 3007 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1003 | Online |
+| 3008 |    4723 | 1996-10-05 12:07:00 | 2006 | 1001 | Online |
+| 3009 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3010 | 1309.95 | 1996-10-06 13:12:00 | 2004 | 1002 | Online |
+| 3011 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online |
+| 3012 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3013 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online |
+| 3014 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online |
+| 3015 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online |
+| 3016 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1001 | Online |
+| 3017 |   18.69 | 1996-10-03 12:30:00 | 2001 | 1007 | Online |
+| 3018 |  767.19 | 1996-10-03 13:45:00 | 2002 | 1001 | Online |
+| 3019 |  1900.1 | 1996-10-03 12:05:00 | 2007 | 1004 | Online |
+| 3020 | 5160.45 | 1996-10-03 14:00:00 | 2003 | 1007 | Online |
+| 3021 | 1098.16 | 1996-10-03 13:37:00 | 2008 | 1007 | Online |
+| 3022 | 1713.23 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3023 |   75.75 | 1996-10-04 16:02:00 | 2002 | 1004 | Online |
+| 3024 |    4723 | 1996-10-05 12:07:00 | 2006 | 1002 | Online |
+| 3025 | 1309.95 | 1996-10-06 13:12:00 | 2002 | 1002 | Online |
+| 3026 | 9891.88 | 1996-10-06 13:09:00 | 2006 | 1001 | Online |
+| 3027 | 3455.78 | 1996-10-04 15:21:00 | 2002 | 1003 | Online |
+| 3028 | 1245.98 | 1996-10-04 16:32:00 | 2002 | 1003 | Online |
+| 3029 | 3721.53 | 1996-10-05 12:45:00 | 2006 | 1001 | Online |
+| 3030 |   734.5 | 1996-10-06 13:16:00 | 2004 | 1002 | Online |
+| 3031 | 1729.67 | 1996-10-06 13:07:00 | 2006 | 1007 | Online |
+| 3032 |    3434 | 1996-01-26 17:09:12 | 2006 | 1007 | Online |
+| 3033 |     522 | 1996-12-24 14:23:00 | 2002 | 1002 | Online |
+| 3049 |     500 | 1996-03-14 07:45:19 | 2001 | 1003 | Online |
+| 3074 |     457 | 1996-04-19 05:13:00 | 2008 | 1007 | Online |
+| 3119 |     125 | 1996-07-26 18:37:00 | 2007 | 1001 | Online |
+| 4001 |     145 | 1996-05-13 20:47:00 | 2008 | 1003 | Online |
+| 4012 |     245 | 1996-03-06 13:07:00 | 2001 | 1002 | Online |
+| 4021 |     600 | 1996-08-12 13:07:00 | 2001 | 1002 | Online |
+| 4054 |    1200 | 1996-11-22 13:07:00 | 2004 | 1003 | Online |
+| 5011 |     138 | 1996-09-14 13:07:00 | 2001 | 1007 | Online |
+| 5014 |     980 | 1996-08-23 13:07:00 | 2002 | 1007 | Online |
+| 5015 |    2133 | 1996-06-23 13:07:00 | 2004 | 1007 | Online |
+| 5016 |    1000 | 1996-03-12 13:07:00 | 2002 | 1007 | Online |
+| 5053 |    1500 | 1996-01-01 13:07:00 | 2006 | 1007 | Online |
+| 5099 |     790 | 1996-04-24 13:07:00 | 2002 | 1007 | Online |
+| 6501 |     125 | 1996-06-13 13:07:00 | 2001 | 1001 | Online |
+| 6502 |     535 | 1996-08-24 13:07:00 | 2006 | 1004 | Online |
+| 6503 |    1100 | 1996-07-26 13:07:00 | 2006 | 1007 | Online |
+| 6504 |    1350 | 1996-07-21 13:07:00 | 2008 | 1007 | Online |
++------+---------+---------------------+------+------+--------+
+49 rows in set (0.00 sec)
+
+mysql> select onum,extract(year from odate) from orders where extract(year from odate)=1996;
++------+--------------------------+
+| onum | extract(year from odate) |
++------+--------------------------+
+| 3001 |                     1996 |
+| 3002 |                     1996 |
+| 3003 |                     1996 |
+| 3005 |                     1996 |
+| 3006 |                     1996 |
+| 3007 |                     1996 |
+| 3008 |                     1996 |
+| 3009 |                     1996 |
+| 3010 |                     1996 |
+| 3011 |                     1996 |
+| 3012 |                     1996 |
+| 3013 |                     1996 |
+| 3014 |                     1996 |
+| 3015 |                     1996 |
+| 3016 |                     1996 |
+| 3017 |                     1996 |
+| 3018 |                     1996 |
+| 3019 |                     1996 |
+| 3020 |                     1996 |
+| 3021 |                     1996 |
+| 3022 |                     1996 |
+| 3023 |                     1996 |
+| 3024 |                     1996 |
+| 3025 |                     1996 |
+| 3026 |                     1996 |
+| 3027 |                     1996 |
+| 3028 |                     1996 |
+| 3029 |                     1996 |
+| 3030 |                     1996 |
+| 3031 |                     1996 |
+| 3032 |                     1996 |
+| 3033 |                     1996 |
+| 3049 |                     1996 |
+| 3074 |                     1996 |
+| 3119 |                     1996 |
+| 4001 |                     1996 |
+| 4012 |                     1996 |
+| 4021 |                     1996 |
+| 4054 |                     1996 |
+| 5011 |                     1996 |
+| 5014 |                     1996 |
+| 5015 |                     1996 |
+| 5016 |                     1996 |
+| 5053 |                     1996 |
+| 5099 |                     1996 |
+| 6501 |                     1996 |
+| 6502 |                     1996 |
+| 6503 |                     1996 |
+| 6504 |                     1996 |
++------+--------------------------+
+49 rows in set (0.00 sec)
+
+mysql> select onum,extract(year from odate) Year from orders where extract(year from odate)=1996;
++------+------+
+| onum | Year |
++------+------+
+| 3001 | 1996 |
+| 3002 | 1996 |
+| 3003 | 1996 |
+| 3005 | 1996 |
+| 3006 | 1996 |
+| 3007 | 1996 |
+| 3008 | 1996 |
+| 3009 | 1996 |
+| 3010 | 1996 |
+| 3011 | 1996 |
+| 3012 | 1996 |
+| 3013 | 1996 |
+| 3014 | 1996 |
+| 3015 | 1996 |
+| 3016 | 1996 |
+| 3017 | 1996 |
+| 3018 | 1996 |
+| 3019 | 1996 |
+| 3020 | 1996 |
+| 3021 | 1996 |
+| 3022 | 1996 |
+| 3023 | 1996 |
+| 3024 | 1996 |
+| 3025 | 1996 |
+| 3026 | 1996 |
+| 3027 | 1996 |
+| 3028 | 1996 |
+| 3029 | 1996 |
+| 3030 | 1996 |
+| 3031 | 1996 |
+| 3032 | 1996 |
+| 3033 | 1996 |
+| 3049 | 1996 |
+| 3074 | 1996 |
+| 3119 | 1996 |
+| 4001 | 1996 |
+| 4012 | 1996 |
+| 4021 | 1996 |
+| 4054 | 1996 |
+| 5011 | 1996 |
+| 5014 | 1996 |
+| 5015 | 1996 |
+| 5016 | 1996 |
+| 5053 | 1996 |
+| 5099 | 1996 |
+| 6501 | 1996 |
+| 6502 | 1996 |
+| 6503 | 1996 |
+| 6504 | 1996 |
++------+------+
+49 rows in set (0.00 sec)
+
+mysql> select onum,amt,extract(year from odate) Year from orders where extract(year from odate)=1996;
++------+---------+------+
+| onum | amt     | Year |
++------+---------+------+
+| 3001 |   18.69 | 1996 |
+| 3002 |  1900.1 | 1996 |
+| 3003 |  767.19 | 1996 |
+| 3005 | 5160.45 | 1996 |
+| 3006 | 1098.16 | 1996 |
+| 3007 |   75.75 | 1996 |
+| 3008 |    4723 | 1996 |
+| 3009 | 1713.23 | 1996 |
+| 3010 | 1309.95 | 1996 |
+| 3011 | 9891.88 | 1996 |
+| 3012 | 3455.78 | 1996 |
+| 3013 | 1245.98 | 1996 |
+| 3014 | 3721.53 | 1996 |
+| 3015 |   734.5 | 1996 |
+| 3016 | 1729.67 | 1996 |
+| 3017 |   18.69 | 1996 |
+| 3018 |  767.19 | 1996 |
+| 3019 |  1900.1 | 1996 |
+| 3020 | 5160.45 | 1996 |
+| 3021 | 1098.16 | 1996 |
+| 3022 | 1713.23 | 1996 |
+| 3023 |   75.75 | 1996 |
+| 3024 |    4723 | 1996 |
+| 3025 | 1309.95 | 1996 |
+| 3026 | 9891.88 | 1996 |
+| 3027 | 3455.78 | 1996 |
+| 3028 | 1245.98 | 1996 |
+| 3029 | 3721.53 | 1996 |
+| 3030 |   734.5 | 1996 |
+| 3031 | 1729.67 | 1996 |
+| 3032 |    3434 | 1996 |
+| 3033 |     522 | 1996 |
+| 3049 |     500 | 1996 |
+| 3074 |     457 | 1996 |
+| 3119 |     125 | 1996 |
+| 4001 |     145 | 1996 |
+| 4012 |     245 | 1996 |
+| 4021 |     600 | 1996 |
+| 4054 |    1200 | 1996 |
+| 5011 |     138 | 1996 |
+| 5014 |     980 | 1996 |
+| 5015 |    2133 | 1996 |
+| 5016 |    1000 | 1996 |
+| 5053 |    1500 | 1996 |
+| 5099 |     790 | 1996 |
+| 6501 |     125 | 1996 |
+| 6502 |     535 | 1996 |
+| 6503 |    1100 | 1996 |
+| 6504 |    1350 | 1996 |
++------+---------+------+
+49 rows in set (0.00 sec)
+
+mysql> select curdate extract(dayname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'extract(dayname)' at line 1
+mysql> select curdate dayname;
+ERROR 1054 (42S22): Unknown column 'curdate' in 'field list'
+mysql> select curdate(dayname);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dayname)' at line 1
+mysql> select dayname(curdate());
++--------------------+
+| dayname(curdate()) |
++--------------------+
+| Sunday             |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select dayname(curdate()) Day;
++--------+
+| Day    |
++--------+
+| Sunday |
++--------+
+1 row in set (0.00 sec)
+
+mysql> table emp;
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA         | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI     | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN      | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH      | a12recmpm  | NULL       |        1 |
+|  7369 | SMITH    | M      | CLERK               | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS       | r50mpm     | 7032300011 |        0 |
+|  7499 | ALLEN    | M      | SALESMAN            | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 |
+|  7521 | WARD     | M      | SALESMAN            | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 |
+|  7654 | MARTIN   | M      | SALESMAN            | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE   | a12recmpm  | NULL       |        1 |
+|  7844 | TURNER   | M      | SALESMAN            | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 |
+|  7876 | ADAMS    | M      | CLERK               | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 |
+|  7900 | JAMES    | M      | CLERK               | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL     | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS        | sales@2017 | NULL       |        1 |
+|  7934 | MILLER   | M      | CLERK               | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | QUARTERNOTE  | r50mpm     | 7132300055 |        0 |
+|  7945 | AARUSH   | M      | SALESMAN            | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | AARUSH       | ABCDEF     | NULL       |        0 |
+|  7949 | ALEX     | M      | MANAGER             | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | QUARTERREST  | sales@2017 | 7156567183 |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA      | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA      | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SUPRIYA      | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+28 rows in set (0.00 sec)
+
+mysql> select * from emp where extract(monthname from(Hiredate))='December';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'monthname from(Hiredate))='December'' at line 1
+mysql> select * from emp where extract(monthname from Hiredate='December');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'monthname from Hiredate='December')' at line 1
+mysql> select * from emp where extract(monthname from Hiredate)='December';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'monthname from Hiredate)='December'' at line 1
+mysql> select * from emp where extract(month from Hiredate)=12;
++-------+-------+--------+---------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME | GENDER | JOB     | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+-------+--------+---------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  7369 | SMITH | M      | CLERK   | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV | M      | CLERK   | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7788 | SCOTT | M      | ANALYST | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7900 | JAMES | M      | CLERK   | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD  | M      | ANALYST | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
++-------+-------+--------+---------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select extract(monthname from Hiredate) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'monthname from Hiredate) from emp' at line 1
+mysql> select extract(monthname() from Hiredate) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'monthname() from Hiredate) from emp' at line 1
+mysql> select extract(monthname(month from Hiredate)) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'monthname(month from Hiredate)) from emp' at line 1
+mysql> select * from emp where monthname(Hiredate)="December";
++-------+-------+--------+---------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME | GENDER | JOB     | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+-------+--------+---------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  7369 | SMITH | M      | CLERK   | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV | M      | CLERK   | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7788 | SCOTT | M      | ANALYST | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7900 | JAMES | M      | CLERK   | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD  | M      | ANALYST | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
++-------+-------+--------+---------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select day(Hiredate) from emp where ename=king ;
+ERROR 1054 (42S22): Unknown column 'king' in 'where clause'
+mysql> select day(Hiredate) from emp where ename="king" ;
++---------------+
+| day(Hiredate) |
++---------------+
+|            17 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select weekday(Hiredate) from emp where ename="king" ;
++-------------------+
+| weekday(Hiredate) |
++-------------------+
+|                 1 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select dayname(Hiredate) from emp where ename="king" ;
++-------------------+
+| dayname(Hiredate) |
++-------------------+
+| Tuesday           |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ename, hiredate, dayname(Hiredate) Day from emp where ename="king";
++-------+------------+---------+
+| ename | hiredate   | Day     |
++-------+------------+---------+
+| KING  | 1981-11-17 | Tuesday |
++-------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select ename, hiredate abcd, dayname(Hiredate) Day from emp where ename="king";
++-------+------------+---------+
+| ename | abcd       | Day     |
++-------+------------+---------+
+| KING  | 1981-11-17 | Tuesday |
++-------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select ename, hiredate as abcd, dayname(Hiredate) as Day from emp where ename="king";
++-------+------------+---------+
+| ename | abcd       | Day     |
++-------+------------+---------+
+| KING  | 1981-11-17 | Tuesday |
++-------+------------+---------+
+1 row in set (0.00 sec)
+
+mysql> select ename, hiredate as 'Hired On', Monthname(Hiredate) as Month from emp where ename="Martin";
++--------+------------+-----------+
+| ename  | Hired On   | Month     |
++--------+------------+-----------+
+| MARTIN | 1981-09-28 | September |
++--------+------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select ename, Hiredate, curdate() as 'Current Date',  from emp where ename="Adam";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from emp where ename="Adam"' at line 1
+mysql> select ename, Hiredate, curdate() as 'Current Date'  from emp where ename="Adam";
+Empty set (0.00 sec)
+
+mysql> select date_format(curdate()-hiredate,'%y/%m/%d') from emp where ename="Adam";
+Empty set (0.00 sec)
+
+mysql> select date_format(curdate()-hiredate,'%y/%m/%d') from emp where ename="Adams";
++--------------------------------------------+
+| date_format(curdate()-hiredate,'%y/%m/%d') |
++--------------------------------------------+
+| 39/04/10                                   |
++--------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select date_format(curdate()-hiredate,'%y/%m/%d') as Difference,Hiredate from emp where ename="Adams";
++------------+------------+
+| Difference | Hiredate   |
++------------+------------+
+| 39/04/10   | 1983-01-12 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select date_format(curdate()-hiredate,'%d') as Difference,Hiredate from emp where ename="Adams";
++------------+------------+
+| Difference | Hiredate   |
++------------+------------+
+| 10         | 1983-01-12 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select datediff(hiredate,curdate()) as Difference,Hiredate from emp where ename="Adams";
++------------+------------+
+| Difference | Hiredate   |
++------------+------------+
+|     -14375 | 1983-01-12 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select datediff(curdate(),hiredate) as Difference,Hiredate from emp where ename="Adams";
++------------+------------+
+| Difference | Hiredate   |
++------------+------------+
+|      14376 | 1983-01-12 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate(), curdate()+interval 15 day as Alter;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Alter' at line 1
+mysql> select curdate(), curdate()+interval 15 day as Hiey;
++------------+------------+
+| curdate()  | Hiey       |
++------------+------------+
+| 2022-05-23 | 2022-06-07 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate(), curdate()-interval 15 day as 'ABCD';
++------------+------------+
+| curdate()  | ABCD       |
++------------+------------+
+| 2022-05-23 | 2022-05-08 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate(), curdate()+interval 15 day as 'Alter date';
++------------+------------+
+| curdate()  | Alter date |
++------------+------------+
+| 2022-05-23 | 2022-06-07 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate(), curdate()+interval 15 week as 'Alter date';
++------------+------------+
+| curdate()  | Alter date |
++------------+------------+
+| 2022-05-23 | 2022-09-05 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select curdate(), curdate()+interval 15 year as 'Alter date';
++------------+------------+
+| curdate()  | Alter date |
++------------+------------+
+| 2022-05-23 | 2037-05-23 |
++------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select ename,hiredate from emp where year(hiredate)>1980;
++----------+------------+
+| ename    | hiredate   |
++----------+------------+
+| GITA     | 1981-07-19 |
+| VRUSHALI | 1981-07-19 |
+| SHARMIN  | 1981-07-19 |
+| BANDISH  | 1981-07-19 |
+| AARAV    | 1981-12-31 |
+| THOMAS   | 1981-07-19 |
+| ALLEN    | 1981-02-20 |
+| WARD     | 1981-02-22 |
+| JONES    | 1981-04-02 |
+| MARTIN   | 1981-09-28 |
+| BLAKE    | 1981-05-01 |
+| CLARK    | 1981-06-09 |
+| SCOTT    | 1982-12-09 |
+| KING     | 1981-11-17 |
+| FRED     | 1983-08-09 |
+| TURNER   | 1981-09-08 |
+| ADAMS    | 1983-01-12 |
+| JAMES    | 1981-12-03 |
+| FORD     | 1981-12-03 |
+| HOFFMAN  | 1982-03-24 |
+| MILLER   | 1982-01-23 |
+| ALEX     | 1982-01-24 |
+| NATASHA  | 1981-07-19 |
+| SANGITA  | 1981-07-19 |
+| SUPRIYA  | 1981-07-19 |
++----------+------------+
+25 rows in set (0.00 sec)
+
+mysql> select ename,jobs, concat(ename,'-',jobs);
+ERROR 1054 (42S22): Unknown column 'ename' in 'field list'
+mysql> select ename,job, concat(ename,'-',job) from emp;
++----------+---------------------+------------------------------+
+| ename    | job                 | concat(ename,'-',job)        |
++----------+---------------------+------------------------------+
+| GITA     | Compliance officers | GITA-Compliance officers     |
+| VRUSHALI | Compliance officers | VRUSHALI-Compliance officers |
+| SHARMIN  | Public Relation     | SHARMIN-Public Relation      |
+| BANDISH  | Public Relation     | BANDISH-Public Relation      |
+| SMITH    | CLERK               | SMITH-CLERK                  |
+| AARAV    | CLERK               | AARAV-CLERK                  |
+| THOMAS   | CLERK               | THOMAS-CLERK                 |
+| ALLEN    | SALESMAN            | ALLEN-SALESMAN               |
+| WARD     | SALESMAN            | WARD-SALESMAN                |
+| JONES    | MANAGER             | JONES-MANAGER                |
+| MARTIN   | SALESMAN            | MARTIN-SALESMAN              |
+| BLAKE    | MANAGER             | BLAKE-MANAGER                |
+| CLARK    | MANAGER             | CLARK-MANAGER                |
+| SCOTT    | ANALYST             | SCOTT-ANALYST                |
+| KING     | PRESIDENT           | KING-PRESIDENT               |
+| FRED     | vice PRESIDENT      | FRED-vice PRESIDENT          |
+| TURNER   | SALESMAN            | TURNER-SALESMAN              |
+| ADAMS    | CLERK               | ADAMS-CLERK                  |
+| JAMES    | CLERK               | JAMES-CLERK                  |
+| FORD     | ANALYST             | FORD-ANALYST                 |
+| HOFFMAN  | MANAGER             | HOFFMAN-MANAGER              |
+| GRASS    | SALESMAN            | GRASS-SALESMAN               |
+| MILLER   | CLERK               | MILLER-CLERK                 |
+| AARUSH   | SALESMAN            | AARUSH-SALESMAN              |
+| ALEX     | MANAGER             | ALEX-MANAGER                 |
+| NATASHA  | CLERK               | NATASHA-CLERK                |
+| SANGITA  | Compliance officers | SANGITA-Compliance officers  |
+| SUPRIYA  | ANALYST             | SUPRIYA-ANALYST              |
++----------+---------------------+------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ename,job, concat(ename,'-',job) as 'New Column' from emp;
++----------+---------------------+------------------------------+
+| ename    | job                 | New Column                   |
++----------+---------------------+------------------------------+
+| GITA     | Compliance officers | GITA-Compliance officers     |
+| VRUSHALI | Compliance officers | VRUSHALI-Compliance officers |
+| SHARMIN  | Public Relation     | SHARMIN-Public Relation      |
+| BANDISH  | Public Relation     | BANDISH-Public Relation      |
+| SMITH    | CLERK               | SMITH-CLERK                  |
+| AARAV    | CLERK               | AARAV-CLERK                  |
+| THOMAS   | CLERK               | THOMAS-CLERK                 |
+| ALLEN    | SALESMAN            | ALLEN-SALESMAN               |
+| WARD     | SALESMAN            | WARD-SALESMAN                |
+| JONES    | MANAGER             | JONES-MANAGER                |
+| MARTIN   | SALESMAN            | MARTIN-SALESMAN              |
+| BLAKE    | MANAGER             | BLAKE-MANAGER                |
+| CLARK    | MANAGER             | CLARK-MANAGER                |
+| SCOTT    | ANALYST             | SCOTT-ANALYST                |
+| KING     | PRESIDENT           | KING-PRESIDENT               |
+| FRED     | vice PRESIDENT      | FRED-vice PRESIDENT          |
+| TURNER   | SALESMAN            | TURNER-SALESMAN              |
+| ADAMS    | CLERK               | ADAMS-CLERK                  |
+| JAMES    | CLERK               | JAMES-CLERK                  |
+| FORD     | ANALYST             | FORD-ANALYST                 |
+| HOFFMAN  | MANAGER             | HOFFMAN-MANAGER              |
+| GRASS    | SALESMAN            | GRASS-SALESMAN               |
+| MILLER   | CLERK               | MILLER-CLERK                 |
+| AARUSH   | SALESMAN            | AARUSH-SALESMAN              |
+| ALEX     | MANAGER             | ALEX-MANAGER                 |
+| NATASHA  | CLERK               | NATASHA-CLERK                |
+| SANGITA  | Compliance officers | SANGITA-Compliance officers  |
+| SUPRIYA  | ANALYST             | SUPRIYA-ANALYST              |
++----------+---------------------+------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ename,job, concat(ename,"-",job,salary) as 'New Column' from emp;
+ERROR 1054 (42S22): Unknown column 'salary' in 'field list'
+mysql> select ename,job, concat(ename,"-",job,sal) as 'New Column' from emp;
++----------+---------------------+----------------------------------+
+| ename    | job                 | New Column                       |
++----------+---------------------+----------------------------------+
+| GITA     | Compliance officers | GITA-Compliance officers1750     |
+| VRUSHALI | Compliance officers | VRUSHALI-Compliance officers1750 |
+| SHARMIN  | Public Relation     | SHARMIN-Public Relation1750      |
+| BANDISH  | Public Relation     | BANDISH-Public Relation1750      |
+| SMITH    | CLERK               | SMITH-CLERK800                   |
+| AARAV    | CLERK               | AARAV-CLERK3350                  |
+| THOMAS   | CLERK               | THOMAS-CLERK1750                 |
+| ALLEN    | SALESMAN            | ALLEN-SALESMAN1600               |
+| WARD     | SALESMAN            | WARD-SALESMAN1250                |
+| JONES    | MANAGER             | JONES-MANAGER2975                |
+| MARTIN   | SALESMAN            | MARTIN-SALESMAN1250              |
+| BLAKE    | MANAGER             | BLAKE-MANAGER2850                |
+| CLARK    | MANAGER             | CLARK-MANAGER2450                |
+| SCOTT    | ANALYST             | SCOTT-ANALYST3000                |
+| KING     | PRESIDENT           | KING-PRESIDENT5000               |
+| FRED     | vice PRESIDENT      | FRED-vice PRESIDENT5000          |
+| TURNER   | SALESMAN            | TURNER-SALESMAN1500              |
+| ADAMS    | CLERK               | ADAMS-CLERK1100                  |
+| JAMES    | CLERK               | JAMES-CLERK950                   |
+| FORD     | ANALYST             | FORD-ANALYST3000                 |
+| HOFFMAN  | MANAGER             | HOFFMAN-MANAGER4150              |
+| GRASS    | SALESMAN            | GRASS-SALESMAN2575               |
+| MILLER   | CLERK               | MILLER-CLERK1300                 |
+| AARUSH   | SALESMAN            | AARUSH-SALESMAN1350              |
+| ALEX     | MANAGER             | ALEX-MANAGER1250                 |
+| NATASHA  | CLERK               | NATASHA-CLERK1750                |
+| SANGITA  | Compliance officers | SANGITA-Compliance officers1750  |
+| SUPRIYA  | ANALYST             | SUPRIYA-ANALYST1750              |
++----------+---------------------+----------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select ename,job, concat(ename,"-",job,"-",sal) as 'New Column' from emp;
++----------+---------------------+-----------------------------------+
+| ename    | job                 | New Column                        |
++----------+---------------------+-----------------------------------+
+| GITA     | Compliance officers | GITA-Compliance officers-1750     |
+| VRUSHALI | Compliance officers | VRUSHALI-Compliance officers-1750 |
+| SHARMIN  | Public Relation     | SHARMIN-Public Relation-1750      |
+| BANDISH  | Public Relation     | BANDISH-Public Relation-1750      |
+| SMITH    | CLERK               | SMITH-CLERK-800                   |
+| AARAV    | CLERK               | AARAV-CLERK-3350                  |
+| THOMAS   | CLERK               | THOMAS-CLERK-1750                 |
+| ALLEN    | SALESMAN            | ALLEN-SALESMAN-1600               |
+| WARD     | SALESMAN            | WARD-SALESMAN-1250                |
+| JONES    | MANAGER             | JONES-MANAGER-2975                |
+| MARTIN   | SALESMAN            | MARTIN-SALESMAN-1250              |
+| BLAKE    | MANAGER             | BLAKE-MANAGER-2850                |
+| CLARK    | MANAGER             | CLARK-MANAGER-2450                |
+| SCOTT    | ANALYST             | SCOTT-ANALYST-3000                |
+| KING     | PRESIDENT           | KING-PRESIDENT-5000               |
+| FRED     | vice PRESIDENT      | FRED-vice PRESIDENT-5000          |
+| TURNER   | SALESMAN            | TURNER-SALESMAN-1500              |
+| ADAMS    | CLERK               | ADAMS-CLERK-1100                  |
+| JAMES    | CLERK               | JAMES-CLERK-950                   |
+| FORD     | ANALYST             | FORD-ANALYST-3000                 |
+| HOFFMAN  | MANAGER             | HOFFMAN-MANAGER-4150              |
+| GRASS    | SALESMAN            | GRASS-SALESMAN-2575               |
+| MILLER   | CLERK               | MILLER-CLERK-1300                 |
+| AARUSH   | SALESMAN            | AARUSH-SALESMAN-1350              |
+| ALEX     | MANAGER             | ALEX-MANAGER-1250                 |
+| NATASHA  | CLERK               | NATASHA-CLERK-1750                |
+| SANGITA  | Compliance officers | SANGITA-Compliance officers-1750  |
+| SUPRIYA  | ANALYST             | SUPRIYA-ANALYST-1750              |
++----------+---------------------+-----------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select distinct(select lenght(ename));
+ERROR 1305 (42000): FUNCTION db1.lenght does not exist
+mysql> select distinct(select lenght(ename)) from emp;
+ERROR 1305 (42000): FUNCTION db1.lenght does not exist
+mysql> select ename,distinct(select lenght(ename) from emp) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'distinct(select lenght(ename) from emp) from emp' at line 1
+mysql> select ename,length(ename) from emp group by  length(ename) order by length(ename);
++----------+---------------+
+| ename    | length(ename) |
++----------+---------------+
+| GITA     |             4 |
+| SMITH    |             5 |
+| THOMAS   |             6 |
+| SHARMIN  |             7 |
+| VRUSHALI |             8 |
++----------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> select ename,length(ename) from emp group by  length(ename) order by length(ename) as 'Length ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as 'Length '' at line 1
+mysql> select ename,length(ename) from emp group by  length(ename) order by length(ename);
++----------+---------------+
+| ename    | length(ename) |
++----------+---------------+
+| GITA     |             4 |
+| SMITH    |             5 |
+| THOMAS   |             6 |
+| SHARMIN  |             7 |
+| VRUSHALI |             8 |
++----------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> select ename,length(ename) from emp group by  length(ename);
++----------+---------------+
+| ename    | length(ename) |
++----------+---------------+
+| GITA     |             4 |
+| VRUSHALI |             8 |
+| SHARMIN  |             7 |
+| SMITH    |             5 |
+| THOMAS   |             6 |
++----------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> select hiredate, dayname where empname="Smith" from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from emp' at line 1
+mysql> select hiredate, dayname(Hiredate) from emp where empname="Smith";
+ERROR 1054 (42S22): Unknown column 'empname' in 'where clause'
+mysql> select hiredate, dayname(Hiredate) from emp where ename="Smith";
++------------+-------------------+
+| hiredate   | dayname(Hiredate) |
++------------+-------------------+
+| 1980-12-17 | Wednesday         |
++------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select ename,hiredate, dayname(Hiredate) from emp where ename="Smith";
++-------+------------+-------------------+
+| ename | hiredate   | dayname(Hiredate) |
++-------+------------+-------------------+
+| SMITH | 1980-12-17 | Wednesday         |
++-------+------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select HIREDATE, concat('the' dayname(HIREDATE), 'of' ,date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(HIREDATE), 'of' ,date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'' at line 1
+mysql> select HIREDATE, concat('the', dayname(HIREDATE), 'of' ,date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) from emp;
++------------+--------------------------------------------------------------------------------------------------------------------------------+
+| HIREDATE   | concat('the', dayname(HIREDATE), 'of' ,date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) |
++------------+--------------------------------------------------------------------------------------------------------------------------------+
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
+| 1980-12-17 | theWednesdayof17th of Dec, 1980                                                                                                |
+| 1981-12-31 | theThursdayof31st of Dec, 1981                                                                                                 |
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
+| 1981-02-20 | theFridayof20th of Feb, 1981                                                                                                   |
+| 1981-02-22 | theSundayof22nd of Feb, 1981                                                                                                   |
+| 1981-04-02 | theThursdayof2nd of Apr, 1981                                                                                                  |
+| 1981-09-28 | theMondayof28th of Sep, 1981                                                                                                   |
+| 1981-05-01 | theFridayof1st of May, 1981                                                                                                    |
+| 1981-06-09 | theTuesdayof9th of Jun, 1981                                                                                                   |
+| 1982-12-09 | theThursdayof9th of Dec, 1982                                                                                                  |
+| 1981-11-17 | theTuesdayof17th of Nov, 1981                                                                                                  |
+| 1983-08-09 | theTuesdayof9th of Aug, 1983                                                                                                   |
+| 1981-09-08 | theTuesdayof8th of Sep, 1981                                                                                                   |
+| 1983-01-12 | theWednesdayof12th of Jan, 1983                                                                                                |
+| 1981-12-03 | theThursdayof3rd of Dec, 1981                                                                                                  |
+| 1981-12-03 | theThursdayof3rd of Dec, 1981                                                                                                  |
+| 1982-03-24 | theWednesdayof24th of Mar, 1982                                                                                                |
+| 1980-02-14 | theThursdayof14th of Feb, 1980                                                                                                 |
+| 1982-01-23 | theSaturdayof23rd of Jan, 1982                                                                                                 |
+| 1980-02-14 | theThursdayof14th of Feb, 1980                                                                                                 |
+| 1982-01-24 | theSundayof24th of Jan, 1982                                                                                                   |
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
+| 1981-07-19 | theSundayof19th of Jul, 1981                                                                                                   |
++------------+--------------------------------------------------------------------------------------------------------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select HIREDATE, concat('the', date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) from emp;
++------------+-------------------------------------------------------------------------------------------------------+
+| HIREDATE   | concat('the', date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) |
++------------+-------------------------------------------------------------------------------------------------------+
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
+| 1980-12-17 | the17th of Dec, 1980                                                                                  |
+| 1981-12-31 | the31st of Dec, 1981                                                                                  |
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
+| 1981-02-20 | the20th of Feb, 1981                                                                                  |
+| 1981-02-22 | the22nd of Feb, 1981                                                                                  |
+| 1981-04-02 | the2nd of Apr, 1981                                                                                   |
+| 1981-09-28 | the28th of Sep, 1981                                                                                  |
+| 1981-05-01 | the1st of May, 1981                                                                                   |
+| 1981-06-09 | the9th of Jun, 1981                                                                                   |
+| 1982-12-09 | the9th of Dec, 1982                                                                                   |
+| 1981-11-17 | the17th of Nov, 1981                                                                                  |
+| 1983-08-09 | the9th of Aug, 1983                                                                                   |
+| 1981-09-08 | the8th of Sep, 1981                                                                                   |
+| 1983-01-12 | the12th of Jan, 1983                                                                                  |
+| 1981-12-03 | the3rd of Dec, 1981                                                                                   |
+| 1981-12-03 | the3rd of Dec, 1981                                                                                   |
+| 1982-03-24 | the24th of Mar, 1982                                                                                  |
+| 1980-02-14 | the14th of Feb, 1980                                                                                  |
+| 1982-01-23 | the23rd of Jan, 1982                                                                                  |
+| 1980-02-14 | the14th of Feb, 1980                                                                                  |
+| 1982-01-24 | the24th of Jan, 1982                                                                                  |
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the19th of Jul, 1981                                                                                  |
++------------+-------------------------------------------------------------------------------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select HIREDATE, concat('the ', date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) from emp;
++------------+--------------------------------------------------------------------------------------------------------+
+| HIREDATE   | concat('the ', date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) |
++------------+--------------------------------------------------------------------------------------------------------+
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
+| 1980-12-17 | the 17th of Dec, 1980                                                                                  |
+| 1981-12-31 | the 31st of Dec, 1981                                                                                  |
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
+| 1981-02-20 | the 20th of Feb, 1981                                                                                  |
+| 1981-02-22 | the 22nd of Feb, 1981                                                                                  |
+| 1981-04-02 | the 2nd of Apr, 1981                                                                                   |
+| 1981-09-28 | the 28th of Sep, 1981                                                                                  |
+| 1981-05-01 | the 1st of May, 1981                                                                                   |
+| 1981-06-09 | the 9th of Jun, 1981                                                                                   |
+| 1982-12-09 | the 9th of Dec, 1982                                                                                   |
+| 1981-11-17 | the 17th of Nov, 1981                                                                                  |
+| 1983-08-09 | the 9th of Aug, 1983                                                                                   |
+| 1981-09-08 | the 8th of Sep, 1981                                                                                   |
+| 1983-01-12 | the 12th of Jan, 1983                                                                                  |
+| 1981-12-03 | the 3rd of Dec, 1981                                                                                   |
+| 1981-12-03 | the 3rd of Dec, 1981                                                                                   |
+| 1982-03-24 | the 24th of Mar, 1982                                                                                  |
+| 1980-02-14 | the 14th of Feb, 1980                                                                                  |
+| 1982-01-23 | the 23rd of Jan, 1982                                                                                  |
+| 1980-02-14 | the 14th of Feb, 1980                                                                                  |
+| 1982-01-24 | the 24th of Jan, 1982                                                                                  |
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
+| 1981-07-19 | the 19th of Jul, 1981                                                                                  |
++------------+--------------------------------------------------------------------------------------------------------+
+28 rows in set (0.00 sec)
+
+mysql> select HIREDATE, concat('the ', date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) as 'new colummn'from emp ;
++------------+-----------------------+
+| HIREDATE   | new colummn           |
++------------+-----------------------+
+| 1981-07-19 | the 19th of Jul, 1981 |
+| 1981-07-19 | the 19th of Jul, 1981 |
+| 1981-07-19 | the 19th of Jul, 1981 |
+| 1981-07-19 | the 19th of Jul, 1981 |
+| 1980-12-17 | the 17th of Dec, 1980 |
+| 1981-12-31 | the 31st of Dec, 1981 |
+| 1981-07-19 | the 19th of Jul, 1981 |
+| 1981-02-20 | the 20th of Feb, 1981 |
+| 1981-02-22 | the 22nd of Feb, 1981 |
+| 1981-04-02 | the 2nd of Apr, 1981  |
+| 1981-09-28 | the 28th of Sep, 1981 |
+| 1981-05-01 | the 1st of May, 1981  |
+| 1981-06-09 | the 9th of Jun, 1981  |
+| 1982-12-09 | the 9th of Dec, 1982  |
+| 1981-11-17 | the 17th of Nov, 1981 |
+| 1983-08-09 | the 9th of Aug, 1983  |
+| 1981-09-08 | the 8th of Sep, 1981  |
+| 1983-01-12 | the 12th of Jan, 1983 |
+| 1981-12-03 | the 3rd of Dec, 1981  |
+| 1981-12-03 | the 3rd of Dec, 1981  |
+| 1982-03-24 | the 24th of Mar, 1982 |
+| 1980-02-14 | the 14th of Feb, 1980 |
+| 1982-01-23 | the 23rd of Jan, 1982 |
+| 1980-02-14 | the 14th of Feb, 1980 |
+| 1982-01-24 | the 24th of Jan, 1982 |
+| 1981-07-19 | the 19th of Jul, 1981 |
+| 1981-07-19 | the 19th of Jul, 1981 |
+| 1981-07-19 | the 19th of Jul, 1981 |
++------------+-----------------------+
+28 rows in set (0.00 sec)
+
+mysql> table emp;
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+| EMPNO | ENAME    | GENDER | JOB                 | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+|  6001 | GITA     | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | GITA         | sales@2017 | NULL       |        1 |
+|  6129 | VRUSHALI | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | VRUSHALI     | PUN@8877   | NULL       |        1 |
+|  6473 | SHARMIN  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | SHARMIN      | a12recmpm  | NULL       |        1 |
+|  6781 | BANDISH  | F      | Public Relation     | 7920 | 1981-07-19 | 1750 | NULL |     20 |       1 | BANDISH      | a12recmpm  | NULL       |        1 |
+|  7369 | SMITH    | M      | CLERK               | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 |
+|  7415 | AARAV    | M      | CLERK               | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | AARAV        | NULL       | 7032300084 |        0 |
+|  7421 | THOMAS   | M      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | THOMAS       | r50mpm     | 7032300011 |        0 |
+|  7499 | ALLEN    | M      | SALESMAN            | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 |
+|  7521 | WARD     | M      | SALESMAN            | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 |
+|  7566 | JONES    | M      | MANAGER             | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 |
+|  7654 | MARTIN   | M      | SALESMAN            | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 |
+|  7698 | BLAKE    | M      | MANAGER             | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 |
+|  7782 | CLARK    | M      | MANAGER             | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 |
+|  7788 | SCOTT    | M      | ANALYST             | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 |
+|  7839 | KING     | M      | PRESIDENT           | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 |
+|  7840 | FRED     | M      | vice PRESIDENT      | 7839 | 1983-08-09 | 5000 | NULL |     20 |       1 | SAND STONE   | a12recmpm  | NULL       |        1 |
+|  7844 | TURNER   | M      | SALESMAN            | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 |
+|  7876 | ADAMS    | M      | CLERK               | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 |
+|  7900 | JAMES    | M      | CLERK               | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 |
+|  7902 | FORD     | M      | ANALYST             | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 |
+|  7919 | HOFFMAN  | M      | MANAGER             | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | INTERVAL     | sales@2017 | NULL       |        1 |
+|  7920 | GRASS    | M      | SALESMAN            | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | GRASS        | sales@2017 | NULL       |        1 |
+|  7934 | MILLER   | M      | CLERK               | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | QUARTERNOTE  | r50mpm     | 7132300055 |        0 |
+|  7945 | AARUSH   | M      | SALESMAN            | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | AARUSH       | ABCDEF     | NULL       |        0 |
+|  7949 | ALEX     | M      | MANAGER             | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | QUARTERREST  | sales@2017 | 7156567183 |        1 |
+|  8433 | NATASHA  | F      | CLERK               | 7920 | 1981-07-19 | 1750 | NULL |     30 |       1 | NATASHA      | sales@2017 | NULL       |        1 |
+|  9400 | SANGITA  | F      | Compliance officers | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SANGITA      | NULL       | NULL       |        1 |
+|  9473 | SUPRIYA  | F      | ANALYST             | 7920 | 1981-07-19 | 1750 | NULL |     50 |       1 | SUPRIYA      | XYZ@1234   | NULL       |        1 |
++-------+----------+--------+---------------------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+
+28 rows in set (0.00 sec)
+
+mysql> table department;
+Empty set (0.01 sec)
+
+mysql> table dpt;
+ERROR 1146 (42S02): Table 'db1.dpt' doesn't exist
+mysql> table dept;
++--------+------------+----------+------------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        | STARTEDON  |
++--------+------------+----------+------------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | 24/03/1989 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | 12/04/1989 |
+|     30 | SALES      | CHICAGO  | sales@2017 | 13/04/1989 |
+|     40 | OPERATIONS | BOSTON   | opr@123    | 12/07/1989 |
+|     50 | HR         | PUNE     | PUN@8877   | 22/12/1989 |
++--------+------------+----------+------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> select empno,ename,if(empno=7788,manager='CLARK') as manager from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as manager from emp' at line 1
+mysql> select empno,ename,if(empno=7788,manager is 'CLARK') as manager from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''CLARK') as manager from emp' at line 1
+mysql> select empno,ename,if(empno=7788,manager is 'CLARK') from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''CLARK') from emp' at line 1
+mysql> select empno,ename,if(empno=7788,'manager is 'CLARK'') from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CLARK'') from emp' at line 1
+mysql> select empno,ename,if(empno=7788,'manager is CLARK') from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') from emp' at line 1
+mysql> select empno,ename,if(empno=7788,'manager is CLARK') as r1 from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as r1 from emp' at line 1
+mysql> select empno,ename,if(empno=7788,manager is CLARK) as r1 from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CLARK) as r1 from emp' at line 1
+mysql> select empno,ename,if(empno=7788,'manager is CLARK','manager is King') as r1 from emp;
++-------+----------+------------------+
+| empno | ename    | r1               |
++-------+----------+------------------+
+|  6001 | GITA     | manager is King  |
+|  6129 | VRUSHALI | manager is King  |
+|  6473 | SHARMIN  | manager is King  |
+|  6781 | BANDISH  | manager is King  |
+|  7369 | SMITH    | manager is King  |
+|  7415 | AARAV    | manager is King  |
+|  7421 | THOMAS   | manager is King  |
+|  7499 | ALLEN    | manager is King  |
+|  7521 | WARD     | manager is King  |
+|  7566 | JONES    | manager is King  |
+|  7654 | MARTIN   | manager is King  |
+|  7698 | BLAKE    | manager is King  |
+|  7782 | CLARK    | manager is King  |
+|  7788 | SCOTT    | manager is CLARK |
+|  7839 | KING     | manager is King  |
+|  7840 | FRED     | manager is King  |
+|  7844 | TURNER   | manager is King  |
+|  7876 | ADAMS    | manager is King  |
+|  7900 | JAMES    | manager is King  |
+|  7902 | FORD     | manager is King  |
+|  7919 | HOFFMAN  | manager is King  |
+|  7920 | GRASS    | manager is King  |
+|  7934 | MILLER   | manager is King  |
+|  7945 | AARUSH   | manager is King  |
+|  7949 | ALEX     | manager is King  |
+|  8433 | NATASHA  | manager is King  |
+|  9400 | SANGITA  | manager is King  |
+|  9473 | SUPRIYA  | manager is King  |
++-------+----------+------------------+
+28 rows in set (0.00 sec)
+
+mysql> select empno,ename,if(empno=7788,'CLARK' or empno=7698,'BLAKE' or empno=7566,'JONES','King' ) as Manager from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ','JONES','King' ) as Manager from emp' at line 1
+mysql> select empno,ename,if(empno=7788,'CLARK' or if(empno=7698,'BLAKE') or if(empno=7566,'JONES'),'King' ) as Manager from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') or if(empno=7566,'JONES'),'King' ) as Manager from emp' at line 1
+mysql> select empno,ename,if(empno=7788,'CLARK' or if(empno=7698,'BLAKE') or if(empno=7566,'JONES')),'King' ) as Manager from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') or if(empno=7566,'JONES')),'King' ) as Manager from emp' at line 1
+mysql> select empno,ename,if(empno=7788 or empno=7698 or empno=7566,'Clark' or 'Blake' or 'Jones', 'King') as Manager from emp;
++-------+----------+---------+
+| empno | ename    | Manager |
++-------+----------+---------+
+|  6001 | GITA     | King    |
+|  6129 | VRUSHALI | King    |
+|  6473 | SHARMIN  | King    |
+|  6781 | BANDISH  | King    |
+|  7369 | SMITH    | King    |
+|  7415 | AARAV    | King    |
+|  7421 | THOMAS   | King    |
+|  7499 | ALLEN    | King    |
+|  7521 | WARD     | King    |
+|  7566 | JONES    | 0       |
+|  7654 | MARTIN   | King    |
+|  7698 | BLAKE    | 0       |
+|  7782 | CLARK    | King    |
+|  7788 | SCOTT    | 0       |
+|  7839 | KING     | King    |
+|  7840 | FRED     | King    |
+|  7844 | TURNER   | King    |
+|  7876 | ADAMS    | King    |
+|  7900 | JAMES    | King    |
+|  7902 | FORD     | King    |
+|  7919 | HOFFMAN  | King    |
+|  7920 | GRASS    | King    |
+|  7934 | MILLER   | King    |
+|  7945 | AARUSH   | King    |
+|  7949 | ALEX     | King    |
+|  8433 | NATASHA  | King    |
+|  9400 | SANGITA  | King    |
+|  9473 | SUPRIYA  | King    |
++-------+----------+---------+
+28 rows in set, 3 warnings (0.00 sec)
+
+mysql> select empno,ename,if(empno=7788 or empno=7698 or empno=7566, 'King') as Manager from emp;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as Manager from emp' at line 1
+mysql> select empno,ename,if(empno=7788 or empno=7698 or empno=7566,'abcd','King') as Manager from emp;
++-------+----------+---------+
+| empno | ename    | Manager |
++-------+----------+---------+
+|  6001 | GITA     | King    |
+|  6129 | VRUSHALI | King    |
+|  6473 | SHARMIN  | King    |
+|  6781 | BANDISH  | King    |
+|  7369 | SMITH    | King    |
+|  7415 | AARAV    | King    |
+|  7421 | THOMAS   | King    |
+|  7499 | ALLEN    | King    |
+|  7521 | WARD     | King    |
+|  7566 | JONES    | abcd    |
+|  7654 | MARTIN   | King    |
+|  7698 | BLAKE    | abcd    |
+|  7782 | CLARK    | King    |
+|  7788 | SCOTT    | abcd    |
+|  7839 | KING     | King    |
+|  7840 | FRED     | King    |
+|  7844 | TURNER   | King    |
+|  7876 | ADAMS    | King    |
+|  7900 | JAMES    | King    |
+|  7902 | FORD     | King    |
+|  7919 | HOFFMAN  | King    |
+|  7920 | GRASS    | King    |
+|  7934 | MILLER   | King    |
+|  7945 | AARUSH   | King    |
+|  7949 | ALEX     | King    |
+|  8433 | NATASHA  | King    |
+|  9400 | SANGITA  | King    |
+|  9473 | SUPRIYA  | King    |
++-------+----------+---------+
+28 rows in set (0.00 sec)
+
+mysql> select empno,ename,if(empno=7788 or empno=7698 or empno=7566,'ABCSJBB','King') as Manager from emp;
++-------+----------+---------+
+| empno | ename    | Manager |
++-------+----------+---------+
+|  6001 | GITA     | King    |
+|  6129 | VRUSHALI | King    |
+|  6473 | SHARMIN  | King    |
+|  6781 | BANDISH  | King    |
+|  7369 | SMITH    | King    |
+|  7415 | AARAV    | King    |
+|  7421 | THOMAS   | King    |
+|  7499 | ALLEN    | King    |
+|  7521 | WARD     | King    |
+|  7566 | JONES    | ABCSJBB |
+|  7654 | MARTIN   | King    |
+|  7698 | BLAKE    | ABCSJBB |
+|  7782 | CLARK    | King    |
+|  7788 | SCOTT    | ABCSJBB |
+|  7839 | KING     | King    |
+|  7840 | FRED     | King    |
+|  7844 | TURNER   | King    |
+|  7876 | ADAMS    | King    |
+|  7900 | JAMES    | King    |
+|  7902 | FORD     | King    |
+|  7919 | HOFFMAN  | King    |
+|  7920 | GRASS    | King    |
+|  7934 | MILLER   | King    |
+|  7945 | AARUSH   | King    |
+|  7949 | ALEX     | King    |
+|  8433 | NATASHA  | King    |
+|  9400 | SANGITA  | King    |
+|  9473 | SUPRIYA  | King    |
++-------+----------+---------+
+28 rows in set (0.00 sec)
+
+mysql> select empno,ename,if(empno=7788,'Clark,'King'),if(empno=7698,'Blake,'King'),if(empno=7566,'Jones,'King') as Manager from emp;
+    '> ^C
+mysql> select empno,ename,if(empno=7788,'Clark,'King'),if(empno=7698,'Blake,'King'),if(empno=7566,'Jones,'King') as Manager from emp;
+    '> ^C
+mysql> select empno,ename,if(empno=7788,'Clark,'King'),if(empno=7698,'Blake,'Kin^C),if(empno=7566,'Jones,'King') as Manager
+mysql> ^C
+mysql> select empno,ename,if(empno=7788,'Clark,'King'),if(empno=7698,'Blake,'King'),if(empno=7566,'Jones,'King') as Manager from emp;
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '>
+    '> ^C
+mysql> select empno,ename,if(empno=7788,'Clark,'King'),if(empno=7698,'Blake,'King'),if(empno=7566,'Jones,'King') as Manager from emp;
+    '> ^C
+mysql> select empno,ename,if(empno=7788,'Clark,'King'),if(empno=7698,'Blake,'King'),if(empno=7566,'Jones,'King') as Manager from emp;

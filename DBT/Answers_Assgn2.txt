@@ -1,0 +1,74 @@
+1.	Display the Employee Name, Job, and Start Date of Employees hired from February 1981 to May 1981.
++++++ select ENAME, JOB, HIREDATE from emp where extract(month from HIREDATE) >= 02 and extract(month from HIREDATE) <= 05 and extract(year from HIREDATE) = 1981;
++++++  select ENAME, JOB, HIREDATE from emp where (HIREDATE between '1981-02-01' and '1981-05-31');
+
+2.	Display the Name and Hiredate of every Employee who was hired in 1982.
+++++ select ENAME, HIREDATE from emp where extract(year from HIREDATE) = 1982;
+
+3.	Write a query to display the current date. Label the column as Current Date.
+++++  select curdate() as 'current date';
+
+4.	Modify the query to display the dates as “Sunday, the 7th of September, 1981”.
+++++ select HIREDATE, concat(dayname(HIREDATE), ', the ' ,date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) from emp;
+
+5.	Display the Name, Hiredate and day of the week on which the employees started. Order the results by the Day of the week starting with Monday.
+
++++++  dayofweek :   1 | Sunday
+	weekday :    0 | Monday
++++++   select ENAME, HIREDATE, weekday(HIREDATE), dayname(HIREDATE) from emp;
+
+
+6.	Display details of orders received in the year 1996. 
+++++  table orders;
+++++  select * from orders where extract(year from odate)=1996;
+++++  select onum,extract(year from odate) Year from orders where extract(year from odate)=1996;
+
+7.	Write a query to find out the DAY (for example, SUNDAY) of the current date.
+++++ 	select dayname(curdate()) Day;
+
+8.	List employee details who have joined in December.
++++++ 	 select * from emp where monthname(Hiredate)="December";
+
+9.	Display day on which KING joined.
++++++ 	select ename, hiredate as Hired, dayname(Hiredate) as Day from emp where ename="king";
+
+10.	Display month on which MARTIN joined.
+++++ select ename, hiredate as 'Hired On', Monthname(Hiredate) as Month from emp where ename="Martin";
+
+
+11.	Find number of days elapsed between today’s date and hiredate of ‘ADAMS’.
+++++    select datediff(curdate(),hiredate) as Difference,Hiredate from emp where ename="Adams";
+
+12.	Print the date, 15 days alter today’s date.
+++++	select curdate(), curdate()+interval 15 day as 'Alter date';
+
+13.	List all employee hired in the month of December.
+++++ select * from emp where monthname(Hiredate)="December";
+
+
+14.	List all employee hired after 1980.
+++++ 	select ename,hiredate from emp where year(hiredate)>1980;
+
+
+15.	Display names and jobs of employee in the format SMITH-CLERK.
+++++	select ename,job, concat(ename,'-',job) as 'New Column' from emp;
+
+16.	Show the length of names in EMP table. Eliminate duplicate length. Same lenght Duplicate name don't show.
+++++	select ename,length(ename) from emp group by  length(ename);
+
+17.	List the names and hiredate of EMP in dept 20, display hiredate formatted as 12/03/1984.
+++++	
+
+18.	Find the day of week on which SMITH joined.
+++++	select ename,hiredate, dayname(Hiredate) from emp where ename="Smith";	
+
+19.	Retrieve the ANALYST record with hiredate formatted as ‘The 3rd of Oct. 1984’.
+++++	select HIREDATE, concat('the ', date_format(HIREDATE,'%D'), ' of ' , date_format(HIREDATE,'%b'), ', ' , year(HIREDATE)) as 'new column'from emp ;
+
+20.	Display the Names of the Managers as follows-
+a.	If the employee code is 7788 the Manager is CLARK
+b.	If the employee code is 7698 the Manager is BLAKE
+c.	If the employee code is 7566 the Manager is JONES
+d.	For all other Employees the Manager is KING
+++++
+
