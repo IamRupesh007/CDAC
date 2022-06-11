@@ -1,0 +1,241 @@
+31_5_2022
+
+
+Agenda:
+	Case Study:
+			ECommerce Solution
+			Online Shopping Application
+			(Web based Solution)
+	SDLC
+	SRS
+	Analysis
+	Design
+
+
+
+We started......................
+
+Web Application
+Online Applications
+	Shopping Application
+	gmail
+	AxisBankonline
+
+	Software Engineering
+		SDLC:
+		Software Development Life Cycle:
+		Different phases of SDLC:
+			Planning:Requirement Gathering ( Requirement Engineering)
+				(Subject Matter expert, Domain Experts, Business Analyst, QA Team, 
+				 Solution Architect,etc. Customer)
+			2.Analysis phase
+				(Bunsiness Analyst, System Analyst, Software Architect, QA Team)
+			3.Design phase
+				(Solution Designers, Software Architects, Senior Developers)
+			4.Development phase
+				(Full stack Developers,
+				 Front End application Developers (UI/ UX Developers)
+				 Datase Developers,
+				 Core application Developers, etc.)
+					
+			5.Testing phase
+				 Mannual Testers
+				 Automation Testers
+				 Testing Enviornments
+				 Testing Tools
+			6.Deployment phase
+				Production Enviornment
+				Production Team
+					Senior Develoeprs
+					System Engineers
+					DevOps Engineers		
+			7.Support (Maintainance) phase
+					 System Engineers
+					 DevOps Team
+					 Customer Support Engineers
+					
+
+	SDLC Model:
+			Water fall Model
+			Spiral Model
+					Agile Methodology
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+1.Planning: 
+	actors involoved:
+			Supervisors, Business People, 
+			Business Executives( CEO, BOD, investors)
+			stakeholder:
+				     people who want to purchase product items
+				     Suppliers 
+				     Salers
+				     staff ( sales, marketing)
+
+	1.Who is going to use the software application?
+		stakeholder
+		BOD
+	2.How is the software application going to be used?
+		Registered users will be able to purchase prouduct items from remote place ( from anywhere)
+		Salers will be able add new product or update stock of promoted product using this software
+		Staff will be able to track Business Operations day to day basis, 
+		Staff will be able get 360 degree view of complete Product shopping.
+		Staff will be able to control shopping from their workplace.
+	3.What is information going to be processed by software? 
+		placed orders will be processed by Software.
+		online payment processing will be taken care  using Payment Gateways, UPI, Net banking, Cash on delivery.
+		Product catalog will be maintained by Software.
+		Inventory will be keep updated as and when required
+		Smart discountinng, promotions will be managed by software
+	4.What kind of investment needed for Online Shopping ?
+		infrastructure cost
+				hardware cost, 
+				energy cost
+		platform cost
+				networking devices,
+				Server licences
+				Database server cost
+				
+		service cost
+				Software build cost
+				Software migration cost
+				Software Administration, configuration.
+		
+	5.Timeline for getting software Up and running ?
+	6.What kind of resources required to build software ?
+	
+	Define Scope:
+			
+		Business Requirement Specification (Functional Requirement Specification)
+
+Requirement Gathering ( Requirement Engineering)
+
+	ECommerce Online Shopping
+
+	
+
+
+
+
+	SRS Document:
+
+	A]Requirement Specification:
+
+		Introduction: SRS document for providing solution by Design and Developement of a productive e-commerce portal.
+
+		Objective: To develope robust,efficient,secured and user friendly Portal for customers who wants to purchase as well as Wendors who wants to list their products. 
+		stakeholders: customer,sales executive,Executive manager,Board of Directors,project sponser
+			      
+                              
+	
+	        Functional Requirement :
+
+			Product Catalog:     A)Classify Product According to Catageory
+				                 B)Required Product searching
+					             C)Filter The Products According to price , product specification, rating, Brand,Gender, Offers etc.
+					             D) Product Comparison of different brands
+	
+						
+			Shopping Cart:      1) Adding and Removing a product
+                                2) Specify Product Quantity
+			
+ 
+			Payment Processing: 1)User Friendly and Secure Payment Methods
+					            2)Multiple Payment Method Choices eg.  Wallet, Cards (Debit,Credit), UPI, COD (cash on delivery)
+					            3)Compatable with multiple platforms eg.Banks and Fintechs	
+					
+			Billing:            1)Invoice Generation + Product Confirmation
+				                2)Selected Mode Of Payment
+
+
+			Wishlist:           1)Adding Favourite Products
+					            2)Removing Products From The List
+								3)Subscribed products 
+
+
+
+			Delivery(Shipping): 1)Address => eg.name,pincode,city,landmark
+				 	            2)Contact Details => Name,Mobile Number,Email-ID
+ 			
+			OrderProcessing:    1)Checking For Authorise user and generating Order ID (unique id for every order)
+					            2)Order Tracking (live tracking of orders)
+					            3)Order Cancellation (Cancel Order which fulfill T&C)	
+			
+			CRM:                1)Customer Care
+				                2)Chat Support
+				                3)Mail Support
+					            4)Return/Refund options and Policies
+			
+			BI:                 1)Data Collection and Analysis 
+				                2)Research on new Products
+					            3)Customer Data Analysis according to that launching new campaigns/offers
+
+			Recommendation:     1)Recommendation based on searching history
+					            2)Recommendations on Trending Products
+					            3)Prompting on other platforms
+
+			Reviews:            1)Star Rating based on price,specification,durability and service
+				                2)Photo review and video review
+
+  
+			Profile:            1)Login details eg. UserID,password,captcha etc.
+                                2)User details eg. Name,PhoneNo,Email etc.
+				  
+			
+
+		NonFunctional Requirement :
+			
+
+			Security:          1)Secure Payment Gateway
+				               2)User Account Privacy (end to end encrypted)
+							   3)Unaffected Agaist External Malpractices
+
+					    
+	
+			Reliability:       1)Load Handeling Capacity
+					           2)Easy to upgrade productive changes
+							   3)Work According to Goverment Regulatory
+							   4)Should have backup server for critical condition
+				     
+			Availability:      1) 24 x 7 (365 days) service availability
+                               2) Minimum Response time independent of locality			
+				           
+
+			Maintainability:   1)Easy to maintain and handel minor bugs
+					           2)Low maintainance time and frequency
+			
+			Portability:       1)Portable on multiple devices
+					           2)Fast Processing time
+			
+			Accessibility :    1)Fast Accessibility on any platform
+				               2)Easy Listing of Products For Sellers
+				               3)Easily accessible at lower band width
+							   4)Multiple Language support to explore broad spectrum of customer
+			
+			Durability:        1)Highly  efficient agaist adveseries
+					           2)Highly productive despite high load
+			
+			
+			Scalability:       1)Easy to accomodate multiple user
+					           2)Easy to accomodate variety of Products
+
+
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

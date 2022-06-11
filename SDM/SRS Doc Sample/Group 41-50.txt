@@ -1,0 +1,124 @@
+SRS Document:
+
+**********  Requirement Specification   **********
+Introduction: SRS document for online shopping. 
+
+Objective: 
+1.The Purpose of this Document is to outline the requirements facilities for customers.
+
+stakeholders :shareholders in the company 
+	
+
+*****  Functional Requirement : *****
+1.Product Catalog: 
+    1. Registration
+       1.1 Taking Login Name
+       1.2 Taking Password
+       1.3 Taking confirm Password
+       1.4 Taking first name
+       1.5 Taking middle name
+       1.6 Taking last name
+       1.7 Taking e-mail in the e-mail format (Mandatory), Account Recovery 
+       1.8 Taking phone number (Mandatory)
+       1.9 Taking date of birth
+       1.10 Taking address including city, state, country
+       1.11 Submitting the form
+       1.12 Resetting the form
+    
+    2. LogIn
+       2.1 UserName 
+       2.2 Password
+     	
+2. Shopping Cart:
+   1. Add/Remove Product
+   2. Show total Amount
+
+
+3. Payment Processing: 
+   1. Check For Discount/Coupons if Applicable
+   2. Select Payment Option
+
+4. Billing: 
+   1. Instant invoices processing is great for legal reasons 
+   2. They Keep you organised
+   3. Sum  Total of Cart Items
+   4. Create a Bill
+
+5. Wishlist: 
+   1. wishlists create a snapshot of your customer way of thinking.
+   2. wishlists provide a glimpse into your customers world.
+
+6. Delivery(Shipping):
+   1. Check For Prime Coustomers(Fastest Delivery)
+
+7. OrderProcessing:
+   1. Tracking Order
+   2. Return Items
+
+8. CRM:
+   1. Live Chat
+   2. Customers Support
+
+9. BI:
+   1. Business intelligence allows e-commere businesses to make decisions based on 
+		statistical facts, rather than guesses.
+   2. Bi gives access to sales trends based on customers preferences,purchasing behavior,
+		online shopping experiences ,reactions to promotions and other patterns.
+
+10. Recommendation:
+   1. Previous Purchese Buy Again
+   2. Suggestion Related To previous Purchese
+   3. Suggestion According To Wishlist
+
+11. Reviews:
+   1. Build credibility and trust.
+   2. Low cost marketing.
+   3. Develop a closer relationship with your customers
+ 
+12. Profile :
+   1. Personal Information(Name,Email, MobileNo,Address)
+   2. Type OF Customers(Prime/Non-Prime)
+   3. Deafult Payment Option
+ 
+
+			
+
+************  NonFunctional Requirement : **********
+1. Security :
+   1. Checking for authorized User Via Mobile/Email
+   2. User Data Should Be secured must not be leaked.
+
+2. Reliability
+   1. Checking The percent rate of failure of Perticular software.
+   
+3. Availability
+   1. Checking a Product Availability to Particular Location.
+   2. When Product is Back to the Stock then notify the User,& available for customer 24*7.
+
+4. Maintainability
+   1. Maintain Stocklist
+   2. Updating Item List
+   3. Adding Discount/News
+   
+
+5. Portability
+   1. The ability of software system to work on Different Platform like Android ,IOS , 
+   Windows equally well.
+
+6. Accessibility
+   1. It is insuring that there are no barriers for a customers while Online Shopping.
+
+7. Durability
+   1. Software Shoule be Durable in High-Traffic like Festival Season , Rush hours Deals , 
+		Big Billion Days Sales.(preserving details)
+
+8. Scalability :
+   1. Responsive Aplication to varoius Gadget.
+
+9. Recoverability
+   1. Software Should be recover from crash or Failure in the system as soon as possible and 
+		resume the work in minimum time.
+
+10. Usability
+   1. It indicates the ease of use(Friendly User Interface).
+

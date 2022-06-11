@@ -1,0 +1,126 @@
+git remote set-url origin https://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@github.com/RaviTambade/demo.git
+
+
+
+ Implementaion Phase:
+
+   Building Software ( Online Shopping Application)
+
+	 Online Shopping Application:
+			Building Application from Scratch
+			FullStack Application	
+	FullStack Development:
+	Full Stack
+		Java Full Stack Development ( java)---------Java Runtime------(JVM)----Execution Engine
+		.NET full STack Development (C#)------------
+		LAMP full Stack Development (Linux, Apache, MySql, PHP)
+		(Javascript Full Stack Development)---------- javascript or Typescript
+						   	     Runtime: Node JS--------(Javascript Execution engine)
+				MEAN Stack  ( Mongo DB) + (Experss JS) + Angular + Node JS
+				MERN Stack  ( Mongo DB) + (Experss JS) + React.js + Node JS
+				MEVN STack   ( Mongo DB) + (Experss JS) + Vue.JS + Node JS
+
+
+		
+	FullStack Developer:
+
+	FrontEnd ( User Interface)---------(Web Application) hosted on Webserver-----Ecommerce D/B using 
+											MySQL
+	
+	Essential things needed for Building Software:
+	1.Tool:	Eclipse, Visual studio  Code postman profiler
+
+  List Technologies used for building  Software:
+		Java Technology
+		.NET Technology
+		Node JS Technology
+		Python Technology
+  Technology:
+		Runtime
+		Libraries
+		Debugger
+		Compilers/ interpreters
+		Text Editor
+		
+		
+  Language: C, C++, Java, C#, Python, Javascript, Typescript + Go + Dart
+  Library:C/C++ Runtime library, 
+	.class Files, Assemblies (.dll files),
+	 Python Libraries, js file, 
+	.ts files
+ 	 .go libraries
+  Runtime: Java Runtime, 
+	   .NET Runtime,
+	   C/C++ Runtime, 
+	   Python Runime,  
+	   Node JS
+  Architecture: Model View  Controller Architecture
+  Framework:MFC ( Document View Architecture), Spring MVC Framework , React JS , 
+		Angular, Vue.js ( Javascript UI Framworks),
+		ORM (Object Relational Mapping )
+		Hibernate
+		ADO.NET Entity Framework 
+	
+ Tools: IDE Tool ( Integrated Development Enviornment) EClipse
+		Text Editor-------Write Source Code
+		Intellisense tool ---Auto Suggestions
+		Java Compiler
+		Libraries ( .jar files) ( .class files)
+		Maven Dependency Resolver------ you can download external java complied libraries
+		Debugger
+
+
+Source Control Management: (SCM)
+
+		
+
+		Centralized Code Repository: GITHub ( internet)
+				Source Files
+					
+				
+				Collaborative Tool:
+
+				number of contributors:
+							Ravi : Client Application ( git Client)-----push , pull , commit changes
+										 back to centralized repository
+										from  (Local Repository) ( folder)
+							Sachin:Client Application
+							Mayur :Client Application
+							Hema :Client Application
+							Sangita :Client Application
+
+			Storage:  Source code files  ( .java, .cs file,  .js files. .cpp files
+				  Configuration Files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

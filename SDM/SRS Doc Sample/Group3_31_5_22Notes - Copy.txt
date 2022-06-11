@@ -1,0 +1,213 @@
+31_5_2022
+
+
+Agenda:
+	Case Study:
+			ECommerce Solution
+			Online Shopping Application
+			(Web based Solution)
+	SDLC
+	SRS
+	Analysis
+	Design
+
+
+
+We started......................
+
+Web Application
+Online Applications
+	Shopping Application
+	gmail
+	AxisBankonline
+
+	Software Engineering
+		SDLC:
+		Software Development Life Cycle:
+		Different phases of SDLC:
+			Planning:Requirement Gathering ( Requirement Engineering)
+				(Subject Matter expert, Domain Experts, Business Analyst, QA Team, 
+				 Solution Architect,etc. Customer)
+			2.Analysis phase
+				(Bunsiness Analyst, System Analyst, Software Architect, QA Team)
+			3.Design phase
+				(Solution Designers, Software Architects, Senior Developers)
+			4.Development phase
+				(Full stack Developers,
+				 Front End application Developers (UI/ UX Developers)
+				 Datase Developers,
+				 Core application Developers, etc.)
+					
+			5.Testing phase
+				 Mannual Testers
+				 Automation Testers
+				 Testing Enviornments
+				 Testing Tools
+			6.Deployment phase
+				Production Enviornment
+				Production Team
+					Senior Develoeprs
+					System Engineers
+					DevOps Engineers		
+			7.Support (Maintainance) phase
+					 System Engineers
+					 DevOps Team
+					 Customer Support Engineers
+					
+
+	SDLC Model:
+			Water fall Model
+			Spiral Model
+					Agile Methodology
+
+
+
+
+_____________________________________________________________________________________________________________________________________
+
+1.Planning: 
+	actors involoved:
+			Supervisors, Business People, 
+			Business Executives( CEO, BOD, investors)
+			stakeholder:
+				     people who want to purchase product items
+				     Suppliers 
+				     Salers
+				     staff ( sales, marketing)
+
+	1.Who is going to use the software application?
+		stakeholder
+		BOD
+	2.How is the software application going to be used?
+		Registered users will be able to purchase prouduct items from remote place ( from anywhere)
+		Salers will be able add new product or update stock of promoted product using this software
+		Staff will be able to track Business Operations day to day basis, 
+		Staff will be able get 360 degree view of complete Product shopping.
+		Staff will be able to control shopping from their workplace.
+	3.What is information going to be processed by software? 
+		placed orders will be processed by Software.
+		online payment processing will be taken care  using Payment Gateways, UPI, Net banking, Cash on delivery.
+		Product catalog will be maintained by Software.
+		Inventory will be keep updated as and when required
+		Smart discountinng, promotions will be managed by software
+	4.What kind of investment needed for Online Shopping ?
+		infrastructure cost
+				hardware cost, 
+				energy cost
+		platform cost
+				networking devices,
+				Server licences
+				Database server cost
+				
+		service cost
+				Software build cost
+				Software migration cost
+				Software Administration, configuration.
+		
+	5.Timeline for getting software Up and running ?
+	6.What kind of resources required to build software ?
+	
+	Define Scope:
+			
+		Business Requirement Specification (Functional Requirement Specification)
+
+Requirement Gathering ( Requirement Engineering)
+
+	ECommerce Online Shopping
+
+	SRS Document:
+
+	Requirement Specification: 
+		Introduction: to provide the complete solution for stakeholders as well as customer through a single gateway using the internet .it also describe the functionality the product need to fulfill all stakeholders needs.
+		             scope:
+                                   the system allows the customer to maintain their cart for adding and removing the product over internet.
+                Objective:  By sitting at any corner of the country you can avail the services at your place , 
+                            can be achieved by using this application.
+                          
+                stakeholders:
+                             customer
+                             salers
+                             destributors(logistics)
+                             vendors
+	
+	        Functional Requirement :
+
+			Product Catalog: product based on top brands ,amount range, product size, product discount ,quality 
+		
+			Shopping Cart: after login or registration can placed the order or cancle the order of product from shopping cart.
+			
+                        Payment Processing: 
+                                various payment options :
+                                                         cod
+                                                         emi
+                                                         credit cards
+                                                         debit cards
+                                                         upi     
+                        
+                        Billing: 
+                                linking of the payment gateways with the bank servers 
+                                provided with discount coupons ,delivery charges and gst will included while billing.
+			
+                        Wishlist: customer willing to buy product listed and can save in the list, whenever you logged in you get the list in your application.  
+			
+                        Delivery(Shipping): system will show the status of product shippment to customer as well as delivery partner .
+                                            customer have authority to cancle the order while shippment.
+                                            delivery person should get the number of delivery of day at a time.
+
+			OrderProcessing: placing the order ,
+                                         selecting the product and its quantity as per user requirements.
+                                         if order place sucessfully product will packed and dispatch.
+                                         after ordering product system will send one copy of bill to customer via email and another one for system database.
+                                         if not statisfied with product it can be returned with 100% refund 
+
+			CRM:  feedback from the customer and timely notification of offers to customer.
+                              seggregation customer on the basis of premium membership.
+                              fullfill the customer satisfaction increase the performance of company.
+
+			BI: seasonal product sale information to help to set future growth of business.
+                            provide the related option based product purchases or past purchase order.
+
+			Recommendation: best selling product and trending products on site will recomended to the customer.
+                                        
+
+			Reviews: rating options for product as well as delivery person.
+			
+                        Profile: profile of customer , vender,  salers, delivery persons.
+			
+
+		NonFunctional Requirement :
+			Security  : secure transaction during payment.
+			Reliability : assurance of quality and originality of the service.
+			Availability : 24x7 availible service.
+			maintainability: in case of failure of service , service will restore as early as possible. 
+			portability : service available on all platforms.
+			accessibility: accessible to any customer from any location.
+			durability  :  
+			Scalability :
+
+
+
+
+
+
+
+
+
+
+
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+

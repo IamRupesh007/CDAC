@@ -1,0 +1,104 @@
+SRS Document: (Software Requirement Specification
+
+	Requirement Specification:
+		Introduction: 
+						This is the SRS for our ecommerce application. it is website which is all about e shopping. it provides customers i.e user to purchase things without going to store. it will address the shopping related problems. vendors can upload their products and customer can buy.
+		
+		
+		
+		Objective:  
+				This SRS document contains the detailed overview of our software , its parameters and goals.
+				It also contains the purpose which fulfuill the requirement with respect to consumers.
+		
+		
+		
+		
+		
+		stakeholders : (USERS and BUSINESS)
+					 Stakeholders are those with an interest in outcome. They are typically the members of a project team, project managers, executives, project sponsors, customers, and users.
+					 
+	
+	        Functional Requirement :
+					Product Catalog:
+						This details include different category products with its  features,price and description.
+						Also include the availability of particular products.
+				
+					Shopping Cart:
+						Keep the Record of the items  a buyer has picked up from the online stores.
+						Removing and adding of products.
+					Payment Processing: 
+						Software provides different modes of Payments-
+										1) Cashless: -
+										     -DEBIT/CREDIT CARDS
+											 -Digital Wallet
+											 -Internet Banking
+										2) Cash On Delivery
+						
+					Billing:
+						software provide Invoice. 
+					Wishlist:
+						Customers willings to buys laters.
+						It allows Shoppers to create personlised collections  of products they want to buy and save them  for future references.
+					Delivery(Shipping):
+					     Sending out and receiving of goods at given address within specific time...like one day delivery ,two days delivery or instant delivery.
+						
+					OrderProcessing:
+						It include the backend process from processing 
+						a received order to  delievered it on time.
+						Also contain the details of Refund orders
+						,order Cancellation and return  policy.
+							
+					CRM: 
+						 
+						complete picture of all customer interaction ,
+						Customer Helpline
+					BI: 
+						Business intelligence  include collecting data, analyzing the data with queries, creating data visualizations such as charts, and producing reports to be used by business decision-makers.
+					
+					Recommendation:
+					     Software recommends the product according to customer 
+						      past search.
+						It also recommend the products according to Seasons ,Sales;
+							
+					Reviews, 
+						It includes the customer feedback.
+					Profile:
+					    Contain user details .
+								1) Name
+								2) Contact details
+								3) Shipping Address
+								4) Orders
+								5) Saved Cards
+								6) 
+								
+						
+					
+
+		NonFunctional Requirement :
+			Security : 
+					 Payment details   will be encrypted by using different encryption techniques.
+					   
+			Reliability:
+						Software perfomance should be efficient in all scenerios of operation.
+						
+			Availability:
+						All functions can be accessed whenever it requires. 
+			maintainability:
+							Software should be  upgrade whenever there is a requirement. 
+			portability :
+						How effectively our system going to perform in different environment.
+						It is able to move from one platform to other platform.
+			accessibility:
+							Contents and Functions  are fully available for all authorised customers.
+							Available in multiple language.
+						
+			durability :    
+							How our System effectively going to handle robustness?
+						
+			Scalability  :
+						Software is capable to handle more requests.
+						Any Amount of traffic can be easily managed.
+
+
+			
+	

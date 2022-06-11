@@ -1,0 +1,76 @@
+
+
+	ECommerce Online Shopping
+
+	SRS Document:
+
+	Requirement Specification:
+		Introduction:The software requirement specification document provides an complete overview of entire srs with purpose, requirements, 			scope, manual,references 
+		Scope:This system allows the customer to maintain their cart for add/remove their product.
+
+
+
+
+	Objective:Analyze and provide overview to the software product by defining problem statement in detail.
+		
+	
+	        Functional Requirement :
+			Product Catalog:Various products can be viewed. Main purpose is to search for specific products according to different 				categories so a customer can browse through different product categories.
+		
+			Shopping Cart:  an individual product can be selected to add/remove in the virtual shopping cart.
+			
+			Payment Processing: To proceed with the purchase customer can select any mode of payment/ payment gateway.
+			
+			Billing:On successfull order placement, invoice will be generated for printing or customer will get the invoice on his 						registered email.
+			
+			Wishlist: Customer can add/remove his liked product which they want to purchase in future.
+			
+			Delivery(Shipping):The product will be delievered by the available deleivery partner within a estimated period.
+			
+			OrderProcessing: Customer can track the product at every stage.Customer can also cancel their  order before final delivery.
+			
+			CRM: Customer can give feedback, complaints at this portal.
+			
+			BI: Customers can view the summary of their purchase history, sales/revenue report on the dashboard.
+			
+			Recommendation:Products will pop on customer's browser screen according to his preferences.
+			
+			Reviews: Customers can provide their feedbacks regarding different products.
+			
+			Profile: Customer can update his profile.
+			
+
+		NonFunctional Requirement :
+			Security: To protect the system against various cyber attacks. 
+			
+			Reliability: The system should not experience critical failures like server down.
+			
+			Availability: Application should be available 24*7 for end-user.
+			
+			maintainability: The system should be maintained properly to provide seemless experience to customer.
+			
+			portability: System should be platform independent.The application can be accessed through various devices.
+			
+			accessibility: Unauthorized user can only browse the application. For purchasing any product user needs to login.
+			
+			durability: The customer can reach out his order history even after a particular period of inactivity.
+			
+			Scalability: If required more sections can be added to the application. 
+
+
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
