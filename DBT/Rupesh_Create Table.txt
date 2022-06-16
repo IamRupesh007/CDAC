@@ -1,0 +1,59 @@
+Question : 1.	Consider the following entities & relationships (Note: Only Indian Passport.)
+
+Person (ID, name, DOB, gender, nationality) 
+PassportDetails (ID, passportNumber, issueDate, expireDate)
+
+The relation between Person and PassportDetaile is one-to-one.
+
+Constraints: Primary Key
+passportNumber must not be null.
+
+mysql> create table person (id int primary key,name varchar(20),DOB date, Gender char(20),nationality varchar(20));
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> desc person;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| id          | int         | NO   | PRI | NULL    |       |
+| name        | varchar(20) | YES  |     | NULL    |       |
+| DOB         | date        | YES  |     | NULL    |       |
+| Gender      | char(20)    | YES  |     | NULL    |       |
+| nationality | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+mysql> create table passportdetails (id int,passportnunmber int not null,issueDate date, expiryDate date, foreign key(id) references person(id));
+Query OK, 0 rows affected (0.37 sec)
+mysql> desc passportdetails;
++-----------------+------+------+-----+---------+-------+
+| Field           | Type | Null | Key | Default | Extra |
++-----------------+------+------+-----+---------+-------+
+| id              | int  | YES  | MUL | NULL    |       |
+| passportnunmber | int  | NO   |     | NULL    |       |
+| issueDate       | date | YES  |     | NULL    |       |
+| expiryDate      | date | YES  |     | NULL    |       |
++-----------------+------+------+-----+---------+-------+
+---------------------------------------------------------------------------------------------------
+
+
+mysql> create table Company3(cid int primary key, cname varchar(20) not null, cproduct varchar(20), state varchar(20));
+mysql> desc Company3;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| cid      | int         | NO   | PRI | NULL    |       |
+| cname    | varchar(20) | NO   |     | NULL    |       |
+| cproduct | varchar(20) | YES  |     | NULL    |       |
+| state    | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+mysql> create table Branches2(bno int,cid int, city varchar(20), foreign key(cid) references company2(cid));
+mysql> desc branches2;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| bno   | int         | YES  |     | NULL    |       |
+| cid   | int         | YES  | MUL | NULL    |       |
+| city  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)

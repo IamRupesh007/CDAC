@@ -1,0 +1,7 @@
+drop procedure if exists P1;
+delimiter $
+create procedure P1()
+begin
+Select "Hello World";
+end $
+delimiter ;
