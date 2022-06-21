@@ -6,6 +6,12 @@ private int data1=100;
 	class User //inner class
 	{
 		private int data2=101;
+		private int common=200;// this is the property test
+
+		public void display() {
+		//outer class Explicitly creates object of user
+			System.out.println("");
+		}
 		
 		public void show() {
 			//inner class method is directly using the private property of outer class
